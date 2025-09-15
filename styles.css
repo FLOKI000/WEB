@@ -125,7 +125,7 @@ body.night .section, body.night .os-box {
 }
 
 body.night .os-box-header {
-    color: #888888;
+    color: #ffffff;
 }
 
 body.night .os-box-header:hover, body.night .os-box-header:active {
@@ -465,7 +465,7 @@ body.day .slider-counter {
 }
 
 body.night .slider-counter {
-    color: #888888;
+    color: #ffffff;
 }
 
 .slider-button {
@@ -644,4 +644,4 @@ body.night .slider-counter {
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(10px); }
     to { opacity: 1; transform: translateY(0); }
-}
+}#000000
