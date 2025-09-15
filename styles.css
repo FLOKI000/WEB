@@ -33,7 +33,7 @@ body.day .nav-container {
 }
 
 body.day .nav svg {
-    stroke: #EBEBEB; /* طیف 3 */
+    stroke: #000000; /* طیف 3 */
 }
 
 body.day .sidebar {
@@ -56,7 +56,7 @@ body.day .section, body.day .os-box {
 }
 
 body.day .os-box-header {
-    color: #EBEBEB; /* طیف 3 */
+    color: #000000; /* طیف 3 */
 }
 
 body.day .os-box-header:hover, body.day .os-box-header:active {
@@ -87,7 +87,7 @@ body.day .slider-button:hover, body.day .slider-button:active {
 }
 
 body.day .slider-counter {
-    color: #EBEBEB; /* طیف 3 */
+    color: #000000; /* طیف 3 */
 }
 
 /* تم شب */
