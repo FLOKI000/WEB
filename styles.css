@@ -19,7 +19,7 @@ body {
 
 /* تم روز */
 body.day {
-    background-color: #ffffff;
+    background-color: #D3EFFD; /* پایه تم روز */
     color: #000000;
 }
 
@@ -29,38 +29,38 @@ body.day .offline-message {
 }
 
 body.day .nav-container {
-    background-color: #b3e5e3;
+    background-color: #B8E3FA; /* طیف 1 */
 }
 
 body.day .nav svg {
-    stroke: #126965;
+    stroke: #4A9BC6; /* طیف 2 */
 }
 
 body.day .sidebar {
-    background-color: #b3e5e3;
+    background-color: #B8E3FA; /* طیف 1 */
 }
 
 body.day .sidebar a, body.day .theme-toggle {
-    background-color: #86d3d0;
+    background-color: #A2DAF7; /* طیف 3 */
     color: #ffffff;
 }
 
 body.day .sidebar a:hover, body.day .theme-toggle:hover,
 body.day .sidebar a:active, body.day .theme-toggle:active {
-    background-color: #59c1bd;
+    background-color: #8CD1F4; /* طیف 4 */
     transform: scale(1.05);
 }
 
 body.day .section, body.day .os-box {
-    background-color: #b3e5e3;
+    background-color: #B8E3FA; /* طیف 1 */
 }
 
 body.day .os-box-header {
-    color: #1f8c88;
+    color: #4A9BC6; /* طیف 2 */
 }
 
 body.day .os-box-header:hover, body.day .os-box-header:active {
-    background-color: #2cafab;
+    background-color: #76C8F1; /* طیف 5 */
     transform: scale(1.02);
 }
 
@@ -69,21 +69,21 @@ body.day .os-box-content {
 }
 
 body.day .os-box-content div {
-    background-color: #b3e5e3;
+    background-color: #B8E3FA; /* طیف 1 */
     color: #000000;
 }
 
 body.day .os-box-content div:hover, body.day .os-box-content div:active {
-    background-color: #2cafab;
+    background-color: #76C8F1; /* طیف 5 */
     transform: scale(1.02);
 }
 
 body.day .slider-button {
-    background-color: #86d3d0;
+    background-color: #A2DAF7; /* طیف 3 */
 }
 
 body.day .slider-button:hover, body.day .slider-button:active {
-    background-color: #59c1bd;
+    background-color: #8CD1F4; /* طیف 4 */
 }
 
 /* تم شب */
@@ -382,7 +382,7 @@ body.offline .offline-message {
 }
 
 .os-box-header::after {
-    content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="%23126965" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>');
+    content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="%234A9BC6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>');
     position: absolute;
     left: 20px;
     transition: transform 0.2s ease;
@@ -461,7 +461,7 @@ body.night .os-box-header::after {
 }
 
 body.day .slider-counter {
-    color: #1f8c88;
+    color: #4A9BC6; /* طیف 2 */
 }
 
 body.night .slider-counter {
