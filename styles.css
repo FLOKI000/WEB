@@ -19,7 +19,7 @@ body {
 
 /* تم روز */
 body.day {
-    background-color: #FFF8E1; /* طیف 7 (کم رنگ‌ترین) */
+    background-color: #FFFFFF; /* طیف 7 (کم‌رنگ‌ترین، سفید) */
     color: #000000;
 }
 
@@ -29,65 +29,65 @@ body.day .offline-message {
 }
 
 body.day .nav-container {
-    background-color: #FFE082; /* طیف 6 */
+    background-color: #FCC5C0; /* طیف 5 */
 }
 
 body.day .nav svg {
-    stroke: #000000; /* طیف 5 */
+    stroke: #000000; /* مشکی برای فلش‌ها */
 }
 
 body.day .sidebar {
-    background-color: #FFE082; /* طیف 6 */
+    background-color: #FCC5C0; /* طیف 5 */
 }
 
 body.day .sidebar a, body.day .theme-toggle {
-    background-color: #FFB300; /* طیف 4 */
+    background-color: #FBB6AD; /* طیف 4 */
     color: #000000;
 }
 
 body.day .sidebar a:hover, body.day .theme-toggle:hover,
 body.day .sidebar a:active, body.day .theme-toggle:active {
-    background-color: #FFA000; /* طیف 3 */
+    background-color: #F9A799; /* طیف 3 */
     transform: scale(1.05);
 }
 
 body.day .section, body.day .os-box {
-    background-color: #FFE082; /* طیف 6 */
+    background-color: #FCC5C0; /* طیف 5 */
 }
 
 body.day .os-box-header {
-    color: #000000; /* طیف 5 */
+    color: #000000; /* مشکی */
 }
 
 body.day .os-box-header:hover, body.day .os-box-header:active {
-    background-color: #FF8F00; /* طیف 2 */
+    background-color: #F89880; /* طیف 2 */
     transform: scale(1.02);
 }
 
 body.day .os-box-content {
-    background-color: #FFF8E1; /* طیف 7 */
+    background-color: #FFFFFF; /* طیف 7 (سفید) */
 }
 
 body.day .os-box-content div {
-    background-color: #FFE082; /* طیف 6 */
+    background-color: #FCC5C0; /* طیف 5 */
     color: #000000;
 }
 
 body.day .os-box-content div:hover, body.day .os-box-content div:active {
-    background-color: #FF8F00; /* طیف 2 */
+    background-color: #F89880; /* طیف 2 */
     transform: scale(1.02);
 }
 
 body.day .slider-button {
-    background-color: #FFB300; /* طیف 4 */
+    background-color: #FBB6AD; /* طیف 4 */
 }
 
 body.day .slider-button:hover, body.day .slider-button:active {
-    background-color: #FFA000; /* طیف 3 */
+    background-color: #F9A799; /* طیف 3 */
 }
 
 body.day .slider-counter {
-    color: #000000; /* طیف 5 */
+    color: #000000; /* مشکی */
 }
 
 /* تم شب */
@@ -390,7 +390,7 @@ body.offline .offline-message {
 }
 
 .os-box-header::after {
-    content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="%23FFCA28" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>');
+    content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="%23000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>');
     position: absolute;
     left: 20px;
     transition: transform 0.2s ease;
@@ -492,10 +492,14 @@ body.night .os-box-header::after {
     width: 28px;
     height: 28px;
     fill: none;
-    stroke: #ffffff;
+    stroke: #000000; /* مشکی برای فلش‌های اسلایدر در تم روز */
     stroke-width: 2;
     stroke-linecap: round;
     stroke-linejoin: round;
+}
+
+body.night .slider-button svg {
+    stroke: #ffffff; /* سفید برای تم شب */
 }
 
 .slider-button.prev {
