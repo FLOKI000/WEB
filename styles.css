@@ -19,75 +19,75 @@ body {
 
 /* تم روز */
 body.day {
-    background-color: #F8D2D9; /* طیف 7 */
+    background-color: #F5D3DB; /* طیف 1 */
     color: #000000;
 }
 
-body.day . offline-message {
+body.day .offline-message {
     background-color: #d32f2f;
     color: #ffffff;
 }
 
 body.day .nav-container {
-    background-color: #E59AA8; /* طیف 1 */
+    background-color: #EFB1C0; /* طیف 2 */
 }
 
 body.day .nav svg {
-    stroke: #D9748B; /* طیف 2 */
+    stroke: #E998AC; /* طیف 3 */
 }
 
 body.day .sidebar {
-    background-color: #E59AA8; /* طیف 1 */
+    background-color: #EFB1C0; /* طیف 2 */
 }
 
 body.day .sidebar a, body.day .theme-toggle {
-    background-color: #E2A5B2; /* طیف 3 */
+    background-color: #E37E98; /* طیف 4 */
     color: #ffffff;
 }
 
 body.day .sidebar a:hover, body.day .theme-toggle:hover,
 body.day .sidebar a:active, body.day .theme-toggle:active {
-    background-color: #DB8C9D; /* طیف 4 */
+    background-color: #DD6484; /* طیف 5 */
     transform: scale(1.05);
 }
 
 body.day .section, body.day .os-box {
-    background-color: #E59AA8; /* طیف 1 */
+    background-color: #EFB1C0; /* طیف 2 */
 }
 
 body.day .os-box-header {
-    color: #D9748B; /* طیف 2 */
+    color: #E998AC; /* طیف 3 */
 }
 
 body.day .os-box-header:hover, body.day .os-box-header:active {
-    background-color: #D37E90; /* طیف 5 */
+    background-color: #D74A70; /* طیف 6 */
     transform: scale(1.02);
 }
 
 body.day .os-box-content {
-    background-color: #F5C2CB; /* طیف 6 */
+    background-color: #ffffff;
 }
 
 body.day .os-box-content div {
-    background-color: #E59AA8; /* طیف 1 */
+    background-color: #EFB1C0; /* طیف 2 */
     color: #000000;
 }
 
 body.day .os-box-content div:hover, body.day .os-box-content div:active {
-    background-color: #D37E90; /* طیف 5 */
+    background-color: #D74A70; /* طیف 6 */
     transform: scale(1.02);
 }
 
 body.day .slider-button {
-    background-color: #E2A5B2; /* طیف 3 */
+    background-color: #E37E98; /* طیف 4 */
 }
 
 body.day .slider-button:hover, body.day .slider-button:active {
-    background-color: #DB8C9D; /* طیف 4 */
+    background-color: #DD6484; /* طیف 5 */
 }
 
 body.day .slider-counter {
-    color: #D9748B; /* طیف 2 */
+    color: #E998AC; /* طیف 3 */
 }
 
 /* تم شب */
@@ -390,7 +390,7 @@ body.offline .offline-message {
 }
 
 .os-box-header::after {
-    content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="%23D9748B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>');
+    content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="%23E998AC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>');
     position: absolute;
     left: 20px;
     transition: transform 0.2s ease;
