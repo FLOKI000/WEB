@@ -19,71 +19,75 @@ body {
 
 /* تم روز */
 body.day {
-    background-color: #D3EFFD; /* پایه تم روز */
+    background-color: #F8D2D9; /* طیف 7 */
     color: #000000;
 }
 
-body.day .offline-message {
+body.day . offline-message {
     background-color: #d32f2f;
     color: #ffffff;
 }
 
 body.day .nav-container {
-    background-color: #B8E3FA; /* طیف 1 */
+    background-color: #E59AA8; /* طیف 1 */
 }
 
 body.day .nav svg {
-    stroke: #4A9BC6; /* طیف 2 */
+    stroke: #D9748B; /* طیف 2 */
 }
 
 body.day .sidebar {
-    background-color: #B8E3FA; /* طیف 1 */
+    background-color: #E59AA8; /* طیف 1 */
 }
 
 body.day .sidebar a, body.day .theme-toggle {
-    background-color: #A2DAF7; /* طیف 3 */
+    background-color: #E2A5B2; /* طیف 3 */
     color: #ffffff;
 }
 
 body.day .sidebar a:hover, body.day .theme-toggle:hover,
 body.day .sidebar a:active, body.day .theme-toggle:active {
-    background-color: #8CD1F4; /* طیف 4 */
+    background-color: #DB8C9D; /* طیف 4 */
     transform: scale(1.05);
 }
 
 body.day .section, body.day .os-box {
-    background-color: #B8E3FA; /* طیف 1 */
+    background-color: #E59AA8; /* طیف 1 */
 }
 
 body.day .os-box-header {
-    color: #4A9BC6; /* طیف 2 */
+    color: #D9748B; /* طیف 2 */
 }
 
 body.day .os-box-header:hover, body.day .os-box-header:active {
-    background-color: #76C8F1; /* طیف 5 */
+    background-color: #D37E90; /* طیف 5 */
     transform: scale(1.02);
 }
 
 body.day .os-box-content {
-    background-color: #ffffff;
+    background-color: #F5C2CB; /* طیف 6 */
 }
 
 body.day .os-box-content div {
-    background-color: #B8E3FA; /* طیف 1 */
+    background-color: #E59AA8; /* طیف 1 */
     color: #000000;
 }
 
 body.day .os-box-content div:hover, body.day .os-box-content div:active {
-    background-color: #76C8F1; /* طیف 5 */
+    background-color: #D37E90; /* طیف 5 */
     transform: scale(1.02);
 }
 
 body.day .slider-button {
-    background-color: #A2DAF7; /* طیف 3 */
+    background-color: #E2A5B2; /* طیف 3 */
 }
 
 body.day .slider-button:hover, body.day .slider-button:active {
-    background-color: #8CD1F4; /* طیف 4 */
+    background-color: #DB8C9D; /* طیف 4 */
+}
+
+body.day .slider-counter {
+    color: #D9748B; /* طیف 2 */
 }
 
 /* تم شب */
@@ -153,6 +157,10 @@ body.night .slider-button {
 
 body.night .slider-button:hover, body.night .slider-button:active {
     background-color: #666666;
+}
+
+body.night .slider-counter {
+    color: #ffffff;
 }
 
 /* استایل آفلاین */
@@ -382,7 +390,7 @@ body.offline .offline-message {
 }
 
 .os-box-header::after {
-    content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="%234A9BC6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>');
+    content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="%23D9748B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>');
     position: absolute;
     left: 20px;
     transition: transform 0.2s ease;
@@ -458,14 +466,6 @@ body.night .os-box-header::after {
     margin-top: 10px;
     font-size: 16px;
     font-family: 'Vazirmatn', Arial, sans-serif;
-}
-
-body.day .slider-counter {
-    color: #4A9BC6; /* طیف 2 */
-}
-
-body.night .slider-counter {
-    color: #ffffff;
 }
 
 .slider-button {
@@ -644,4 +644,4 @@ body.night .slider-counter {
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(10px); }
     to { opacity: 1; transform: translateY(0); }
-}#000000
+}
