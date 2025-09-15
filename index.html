@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light only">
+    <title>وب‌سایت فلوکی</title>
+    <link href="https://vazirmatn.github.io/Vazirmatn/fonts/webfonts/Vazirmatn.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="day">
+    <div class="offline-message">شما آفلاین هستید!</div>
+
+    <div class="nav-container" id="nav-container" onclick="toggleMenu()">
+        <div class="nav">
+            <input type="checkbox" id="menu-toggle">
+            <svg style="height: 40px; width: 40px;">
+                <use xlink:href="#menu"></use>
+                <use xlink:href="#menu"></use>
+            </svg>
+        </div>
+    </div>
+
+    <div class="sidebar" id="sidebar">
+        <button class="theme-toggle" onclick="toggleTheme()">🌞</button>
+        <a href="#android" onclick="closeMenu(); toggleOsBox('android')">اندروید</a>
+        <a href="#iphone" onclick="closeMenu(); toggleOsBox('iphone')">آیفون</a>
+        <a href="#windows" onclick="closeMenu(); toggleOsBox('windows')">ویندوز</a>
+        <a href="https://t.me/your_telegram_id" target="_blank" onclick="closeMenu()">تلگرام</a>
+        <a href="https://github.com/your_username" target="_blank" onclick="closeMenu()">گیت‌هاب</a>
+    </div>
+
+    <div class="content">
+        <div class="section" id="intro">
+            <h2>مقدمه</h2>
+            <p>این وب‌سایت آموزش‌هایی برای اتصال به نرم‌افزارها در سیستم‌عامل‌های مختلف ارائه می‌دهد.</p>
+        </div>
+
+        <div class="os-box android" id="android">
+            <div class="os-box-header" onclick="toggleOsBox('android')">اندروید</div>
+            <div class="os-box-content" id="android-content">
+                <div class="install-app" onclick="toggleInstallOptions('android')">نصب اپ</div>
+                <div class="install-options" id="android-install-options" style="display: none;">
+                    <a href="https://play.google.com/store/apps/details?id=com.v2ray.ang" target="_blank"><div>v2rayNG</div></a>
+                </div>
+                <div class="video-tutorial" onclick="toggleVideo('android')">آموزش ویدیویی</div>
+                <div class="video-content" id="android-video-content" style="display: none;">
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/android_specific_video" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="image-tutorial" onclick="toggleSlider('android')">آموزش با تصاویر</div>
+                <div class="slider" id="android-slider" style="display: none;">
+                    <div class="slider-images" id="android-slider-images">
+                        <img class="slider-image" src="https://via.placeholder.com/600x300?text=تصویر+اندروید+1" alt="تصویر اندروید 1">
+                        <img class="slider-image" src="https://via.placeholder.com/600x300?text=تصویر+اندروید+2" alt="تصویر اندروید 2">
+                        <img class="slider-image" src="https://via.placeholder.com/600x300?text=تصویر+اندروید+3" alt="تصویر اندروید 3">
+                        <img class="slider-image" src="https://via.placeholder.com/600x300?text=تصویر+اندروید+4" alt="تصویر اندروید 4">
+                        <img class="slider-image" src="https://via.placeholder.com/600x300?text=تصویر+اندروید+5" alt="تصویر اندروید 5">
+                        <img class="slider-image" src="https://via.placeholder.com/600x300?text=تصویر+اندروید+6" alt="تصویر اندروید 6">
+                        <img class="slider-image" src="https://via.placeholder.com/600x300?text=تصویر+اندروید+7" alt="تصویر اندروید 7">
+                        <img class="slider-image" src="https://via.placeholder.com/600x300?text=تصویر+اندروید+8" alt="تصویر اندروید 8">
+                        <img class="slider-image" src="https://via.placeholder.com/600x300?text=تصویر+اندروید+9" alt="تصویر اندروید 9">
+                        <img class="slider-image" src="https://via.placeholder.com/600x300?text=تصویر+اندروید+10" alt="تصویر اندروید 10">
+                    </div>
+                    <button class="slider-button prev" onclick="moveSlider('android', -1)">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M15 18l-6-6 6-6"/>
+                        </svg>
+                    </button>
+                    <button class="slider-button next" onclick="moveSlider('android', 1)">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M9 18l6-6-6-6"/>
+                        </svg>
+                    </button>
+                    <div class="slider-counter" id="android-slider-counter">تصویر 1/10</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="os-box iphone" id="iphone">
+            <div class="os-box-header" onclick="toggleOsBox('iphone')">آیفون</div>
+            <div class="os-box-content" id="iphone-content">
+                <div class="install-app" onclick="toggleInstallOptions('iphone')">نصب اپ</div>
+                <div class="install-options" id="iphone-install-options" style="display: none;">
+                    <a href="https://apps.apple.com/us/app/streisand/id6450534064" target="_blank"><div>Streisand</div></a>
+                </div>
+                <div class="video-tutorial" onclick="toggleVideo('iphone')">آموزش ویدیویی</div>
+                <div class="video-content" id="iphone-video-content" style="display: none;">
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/iphone_specific_video" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="image-tutorial" onclick="toggleSlider('iphone')">آموزش با تصاویر</div>
+                <div class="slider" id="iphone-slider" style="display: none;">
+                    <div class="slider-images" id="iphone-slider-images">
+                        <img class="slider-image" src="https://via.placeholder.com/600x300?text=تصویر+آیفون+1" alt="تصویر آیفون 1">
+                        <img class="slider-image" src="https://via.placeholder.com/600x300?text=تصویر+آیفون+2" alt="تصویر آیفون 2">
+                        <img class="slider-image" src="https://via.placeholder.com/600x300?text=تصویر+آیفون+3" alt="تصویر آیفون 3">
+                        <img class="slider-image" src="https://via.placeholder.com/600x300?text=تصویر+آیفون+4" alt="تصویر آیفون 4">
+                        <img class="slider-image" src="https://via.placeholder.com/600x300?text=تصویر+آیفون+5" alt="تصویر آیفون 5">
+                        <img class="slider-image" src="https://via.placeholder.com/600x300?text=تصویر+آیفون+6" alt="تصویر آیفون 6">
+                        <img class="slider-image" src="https://via.placeholder.com/600x300?text=تصویر+آیفون+7" alt="تصویر آیفون 7">
+                        <img class="slider-image" src="https://via.placeholder.com/600x300?text=تصویر+آیفون+8" alt="تصویر آیفون 8">
+                        <img class="slider-image" src="https://via.placeholder.com/600x300?text=تصویر+آیفون+9" alt="تصویر آیفون 9">
+                        <img class="slider-image" src="https://via.placeholder.com/600x300?text=تصویر+آیفون+10" alt="تصویر آیفون 10">
+                    </div>
+                    <button class="slider-button prev" onclick="moveSlider('iphone', -1)">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M15 18l-6-6 6-6"/>
+                        </svg>
+                    </button>
+                    <button class="slider-button next" onclick="moveSlider('iphone', 1)">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M9 18l6-6-6-6"/>
+                        </svg>
+                    </button>
+                    <div class="slider-counter" id="iphone-slider-counter">تصویر 1/10</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="os-box windows" id="windows">
+            <div class="os-box-header" onclick="toggleOsBox('windows')">ویندوز</div>
+            <div class="os-box-content" id="windows-content">
+                <div class="install-app" onclick="toggleInstallOptions('windows')">نصب اپ</div>
+                <div class="install-options" id="windows-install-options" style="display: none;">
+                    <a href="https://github.com/2dust/v2rayN/releases" target="_blank"><div>v2rayN</div></a>
+                </div>
+                <div class="video-tutorial" onclick="toggleVideo('windows')">آموزش ویدیویی</div>
+                <div class="video-content" id="windows-video-content" style="display: none;">
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/windows_specific_video" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="image-tutorial" onclick="toggleSlider('windows')">آموزش با تصاویر</div>
+                <div class="slider" id="windows-slider" style="display: none;">
+                    <div class="slider-images" id="windows-slider-images">
+                        <img class="slider-image" src="https://via.placeholder.com/600x300?text=تصویر+ویندوز+1" alt="تصویر ویندوز 1">
+                        <img class="slider-image" src="https://via.placeholder.com/600x300?text=تصویر+ویندوز+2" alt="تصویر ویندوز 2">
+                        <img class="slider-image" src="https://via.placeholder.com/600x300?text=تصویر+ویندوز+3" alt="تصویر ویندوز 3">
+                        <img class="slider-image" src="https://via.placeholder.com/600x300?text=تصویر+ویندوز+4" alt="تصویر ویندوز 4">
+                        <img class="slider-image" src="https://via.placeholder.com/600x300?text=تصویر+ویندوز+5" alt="تصویر ویندوز 5">
+                        <img class="slider-image" src="https://via.placeholder.com/600x300?text=تصویر+ویندوز+6" alt="تصویر ویندوز 6">
+                        <img class="slider-image" src="https://via.placeholder.com/600x300?text=تصویر+ویندوز+7" alt="تصویر ویندوز 7">
+                        <img class="slider-image" src="https://via.placeholder.com/600x300?text=تصویر+ویندوز+8" alt="تصویر ویندوز 8">
+                        <img class="slider-image" src="https://via.placeholder.com/600x300?text=تصویر+ویندوز+9" alt="تصویر ویندوز 9">
+                        <img class="slider-image" src="https://via.placeholder.com/600x300?text=تصویر+ویندوز+10" alt="تصویر ویندوز 10">
+                    </div>
+                    <button class="slider-button prev" onclick="moveSlider('windows', -1)">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M15 18l-6-6 6-6"/>
+                        </svg>
+                    </button>
+                    <button class="slider-button next" onclick="moveSlider('windows', 1)">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M9 18l6-6-6-6"/>
+                        </svg>
+                    </button>
+                    <div class="slider-counter" id="windows-slider-counter">تصویر 1/10</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SVG برای انیمیشن منوی همبرگری -->
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+        <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 56" id="menu">
+            <path d="M48.33,45.6H18a14.17,14.17,0,0,1,0-28.34H78.86a17.37,17.37,0,0,1,0,34.74H42.33l-21-21.26L47.75,4"/>
+        </symbol>
+    </svg>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
