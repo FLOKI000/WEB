@@ -1,6 +1,6 @@
 /* تعریف طیف‌های رنگی برای تم روز (بر اساس #F89880) */
 :root {
-    --day-color-1: #F89880;  /* رنگ اصلی */
+    --day-color-1: #F89880;  /* تیره‌ترین */
     --day-color-2: #F9A18B;
     --day-color-3: #FAAB96;
     --day-color-4: #FBB4A1;
@@ -14,13 +14,13 @@
     --day-color-12: #FFF8F7;
     --day-color-13: #FFFBFA;
     --day-color-14: #FFFDFC;
-    --day-color-15: #FFFFFF; /* کم‌رنگ‌ترین */
+    --day-color-15: #FFFFFF; /* روشن‌ترین */
     --day-text-color: #000000; /* رنگ متن و فلش‌ها */
 }
 
 /* تعریف طیف‌های رنگی برای تم شب (بر اساس #191919) */
 :root {
-    --night-color-1: #191919;  /* رنگ اصلی */
+    --night-color-1: #191919;  /* تیره‌ترین */
     --night-color-2: #252525;
     --night-color-3: #313131;
     --night-color-4: #3D3D3D;
@@ -34,7 +34,7 @@
     --night-color-12: #9D9D9D;
     --night-color-13: #A9A9A9;
     --night-color-14: #B5B5B5;
-    --night-color-15: #C1C1C1; /* کم‌رنگ‌ترین */
+    --night-color-15: #C1C1C1; /* روشن‌ترین */
     --night-text-color: #FFFFFF; /* رنگ متن و فلش‌ها */
 }
 
@@ -59,156 +59,196 @@ body {
 
 /* تم روز */
 body.day {
-    background-color: var(--day-color-11); /* طیف 11 برای پس‌زمینه */
-    color: var(--day-text-color);
+    background-color: var(--day-color-11); /* پس‌زمینه اصلی */
 }
 
 body.day .offline-message {
-    background-color: var(--day-color-1); /* طیف 1 */
+    background-color: var(--day-color-1); /* پیام آفلاین */
     color: var(--day-text-color);
 }
 
 body.day .nav-container {
-    background-color: var(--day-color-6); /* طیف 6 */
+    background-color: var(--day-color-6); /* ظرف منوی همبرگری */
 }
 
 body.day .nav svg {
-    stroke: var(--day-text-color); /* رنگ فلش‌ها */
+    stroke: var(--day-text-color); /* فلش‌های منوی همبرگری */
 }
 
 body.day .sidebar {
-    background-color: var(--day-color-6); /* طیف 6 */
+    background-color: var(--day-color-7); /* منوی کناری */
 }
 
-body.day .sidebar a, body.day .theme-toggle {
-    background-color: var(--day-color-4); /* طیف 4 */
+body.day .sidebar a {
+    background-color: var(--day-color-4); /* لینک‌های منوی کناری */
+    color: var(--day-text-color);
+}
+
+body.day .theme-toggle {
+    background-color: var(--day-color-5); /* دکمه تغییر تم */
     color: var(--day-text-color);
 }
 
 body.day .sidebar a:hover, body.day .theme-toggle:hover,
 body.day .sidebar a:active, body.day .theme-toggle:active {
-    background-color: var(--day-color-3); /* طیف 3 */
+    background-color: var(--day-color-3); /* حالت‌های هاور و فعال */
     transform: scale(1.05);
 }
 
-body.day .section, body.day .os-box {
-    background-color: var(--day-color-5); /* طیف 5 */
+body.day .section {
+    background-color: var(--day-color-8); /* کادر مقدمه */
+}
+
+body.day .os-box {
+    background-color: var(--day-color-9); /* کادرهای سیستم‌عامل */
 }
 
 body.day .os-box-header {
-    color: var(--day-text-color); /* رنگ متن */
+    background-color: var(--day-color-10); /* سرصفحه کادرهای سیستم‌عامل */
+    color: var(--day-text-color);
 }
 
 body.day .os-box-header:hover, body.day .os-box-header:active {
-    background-color: var(--day-color-2); /* طیف 2 */
+    background-color: var(--day-color-2); /* حالت‌های هاور و فعال سرصفحه */
     transform: scale(1.02);
 }
 
 body.day .os-box-content {
-    background-color: var(--day-color-11); /* طیف 11 */
+    background-color: var(--day-color-12); /* محتوای کادر سیستم‌عامل */
 }
 
 body.day .os-box-content div {
-    background-color: var(--day-color-5); /* طیف 5 */
+    background-color: var(--day-color-13); /* آیتم‌های داخل محتوای کادر */
     color: var(--day-text-color);
 }
 
 body.day .os-box-content div:hover, body.day .os-box-content div:active {
-    background-color: var(--day-color-2); /* طیف 2 */
+    background-color: var(--day-color-2); /* حالت‌های هاور و فعال آیتم‌ها */
     transform: scale(1.02);
 }
 
 body.day .slider-button {
-    background-color: var(--day-color-4); /* طیف 4 */
+    background-color: var(--day-color-5); /* دکمه‌های اسلایدر */
 }
 
 body.day .slider-button:hover, body.day .slider-button:active {
-    background-color: var(--day-color-3); /* طیف 3 */
+    background-color: var(--day-color-3); /* حالت‌های هاور و فعال دکمه‌های اسلایدر */
 }
 
 body.day .slider-button svg {
-    stroke: var(--day-text-color); /* رنگ فلش‌ها */
+    stroke: var(--day-text-color); /* فلش‌های دکمه‌های اسلایدر */
 }
 
 body.day .slider-counter {
-    color: var(--day-text-color); /* رنگ متن */
+    background-color: var(--day-color-14); /* پس‌زمینه شمارشگر اسلایدر */
+    color: var(--day-text-color);
+}
+
+body.day .v2rayng-section {
+    background-color: var(--day-color-1); /* بخش اختصاصی V2RayNG */
+    color: var(--day-text-color);
+    padding: 20px;
+    border-radius: 15px;
+    margin: 20px auto;
+    max-width: 600px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15);
 }
 
 /* تم شب */
 body.night {
-    background-color: var(--night-color-11); /* طیف 11 برای پس‌زمینه */
-    color: var(--night-text-color);
+    background-color: var(--night-color-11); /* پس‌زمینه اصلی */
 }
 
 body.night .offline-message {
-    background-color: var(--night-color-1); /* طیف 1 */
+    background-color: var(--night-color-1); /* پیام آفلاین */
     color: var(--night-text-color);
 }
 
 body.night .nav-container {
-    background-color: var(--night-color-6); /* طیف 6 */
+    background-color: var(--night-color-6); /* ظرف منوی همبرگری */
 }
 
 body.night .nav svg {
-    stroke: var(--night-text-color); /* رنگ فلش‌ها */
+    stroke: var(--night-text-color); /* فلش‌های منوی همبرگری */
 }
 
 body.night .sidebar {
-    background-color: var(--night-color-6); /* طیف 6 */
+    background-color: var(--night-color-7); /* منوی کناری */
 }
 
-body.night .sidebar a, body.night .theme-toggle {
-    background-color: var(--night-color-4); /* طیف 4 */
+body.night .sidebar a {
+    background-color: var(--night-color-4); /* لینک‌های منوی کناری */
+    color: var(--night-text-color);
+}
+
+body.night .theme-toggle {
+    background-color: var(--night-color-5); /* دکمه تغییر تم */
     color: var(--night-text-color);
 }
 
 body.night .sidebar a:hover, body.night .theme-toggle:hover,
 body.night .sidebar a:active, body.night .theme-toggle:active {
-    background-color: var(--night-color-3); /* طیف 3 */
+    background-color: var(--night-color-3); /* حالت‌های هاور و فعال */
     transform: scale(1.05);
 }
 
-body.night .section, body.night .os-box {
-    background-color: var(--night-color-5); /* طیف 5 */
+body.night .section {
+    background-color: var(--night-color-8); /* کادر مقدمه */
+}
+
+body.night .os-box {
+    background-color: var(--night-color-9); /* کادرهای سیستم‌عامل */
 }
 
 body.night .os-box-header {
-    color: var(--night-text-color); /* رنگ متن */
+    background-color: var(--night-color-10); /* سرصفحه کادرهای سیستم‌عامل */
+    color: var(--night-text-color);
 }
 
 body.night .os-box-header:hover, body.night .os-box-header:active {
-    background-color: var(--night-color-2); /* طیف 2 */
+    background-color: var(--night-color-2); /* حالت‌های هاور و فعال سرصفحه */
     transform: scale(1.02);
 }
 
 body.night .os-box-content {
-    background-color: var(--night-color-11); /* طیف 11 */
+    background-color: var(--night-color-12); /* محتوای کادر سیستم‌عامل */
 }
 
 body.night .os-box-content div {
-    background-color: var(--night-color-5); /* طیف 5 */
+    background-color: var(--night-color-13); /* آیتم‌های داخل محتوای کادر */
     color: var(--night-text-color);
 }
 
 body.night .os-box-content div:hover, body.night .os-box-content div:active {
-    background-color: var(--night-color-2); /* طیف 2 */
+    background-color: var(--night-color-2); /* حالت‌های هاور و فعال آیتم‌ها */
     transform: scale(1.02);
 }
 
 body.night .slider-button {
-    background-color: var(--night-color-4); /* طیف 4 */
+    background-color: var(--night-color-5); /* دکمه‌های اسلایدر */
 }
 
 body.night .slider-button:hover, body.night .slider-button:active {
-    background-color: var(--night-color-3); /* طیف 3 */
+    background-color: var(--night-color-3); /* حالت‌های هاور و فعال دکمه‌های اسلایدر */
 }
 
 body.night .slider-button svg {
-    stroke: var(--night-text-color); /* رنگ فلش‌ها */
+    stroke: var(--night-text-color); /* فلش‌های دکمه‌های اسلایدر */
 }
 
 body.night .slider-counter {
-    color: var(--night-text-color); /* رنگ متن */
+    background-color: var(--night-color-14); /* پس‌زمینه شمارشگر اسلایدر */
+    color: var(--night-text-color);
+}
+
+body.night .v2rayng-section {
+    background-color: var(--night-color-1); /* بخش اختصاصی V2RayNG */
+    color: var(--night-text-color);
+    padding: 20px;
+    border-radius: 15px;
+    margin: 20px auto;
+    max-width: 600px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15);
 }
 
 /* استایل آفلاین */
@@ -390,6 +430,11 @@ body.offline .offline-message {
     padding: 20px;
     text-align: center;
     z-index: 1;
+    background-color: var(--day-color-15); /* پس‌زمینه محتوای اصلی */
+}
+
+body.night .content {
+    background-color: var(--night-color-15); /* پس‌زمینه محتوای اصلی در تم شب */
 }
 
 /* استایل کادر مقدمه */
@@ -492,12 +537,18 @@ body.night .os-box-header::after {
     max-width: 100%;
     overflow: hidden;
     touch-action: pan-y;
+    background-color: var(--day-color-14); /* پس‌زمینه اسلایدر */
+}
+
+body.night .slider {
+    background-color: var(--night-color-14); /* پس‌زمینه اسلایدر در تم شب */
 }
 
 .slider-images {
     display: flex;
     transition: transform 0.3s ease;
-    will-change: transform;
+    will-chang
+e: transform;
 }
 
 .slider-image {
@@ -514,6 +565,8 @@ body.night .os-box-header::after {
     margin-top: 10px;
     font-size: 16px;
     font-family: 'Vazirmatn', Arial, sans-serif;
+    padding: 5px;
+    border-radius: 5px;
 }
 
 .slider-button {
@@ -590,7 +643,7 @@ body.night .os-box-header::after {
         margin: 0 5px;
     }
 
-    .section, .os-box {
+    .section, .os-box, .v2rayng-section {
         max-width: 90%;
         margin: 12px auto;
     }
@@ -639,7 +692,7 @@ body.night .os-box-header::after {
         line-height: 1.5;
     }
 
-    .section, .os-box {
+    .section, .os-box, .v2rayng-section {
         max-width: 80%;
         margin: 15px auto;
     }
@@ -666,7 +719,7 @@ body.night .os-box-header::after {
 }
 
 @media (min-width: 1025px) {
-    .section, .os-box {
+    .section, .os-box, .v2rayng-section {
         max-width: 600px;
         margin: 20px auto;
     }
