@@ -37,7 +37,7 @@ body.day .nav svg {
 }
 
 body.day .sidebar {
-    background-color: #FCC5C0; /* طیف 5 */
+    background-color: #F89880; /* طیف 5 */
 }
 
 body.day .sidebar a, body.day .theme-toggle {
@@ -47,12 +47,12 @@ body.day .sidebar a, body.day .theme-toggle {
 
 body.day .sidebar a:hover, body.day .theme-toggle:hover,
 body.day .sidebar a:active, body.day .theme-toggle:active {
-    background-color: #FCC5C0; /* طیف 3 */
+    background-color: #F89880; /* طیف 3 */
     transform: scale(1.05);
 }
 
 body.day .section, body.day .os-box {
-    background-color: #FCC5C0; /* طیف 5 */
+    background-color: #F89880; /* طیف 5 */
 }
 
 body.day .os-box-header {
@@ -69,7 +69,7 @@ body.day .os-box-content {
 }
 
 body.day .os-box-content div {
-    background-color: #FCC5C0; /* طیف 5 */
+    background-color: #F89880; /* طیف 5 */
     color: #000000;
 }
 
@@ -83,7 +83,7 @@ body.day .slider-button {
 }
 
 body.day .slider-button:hover, body.day .slider-button:active {
-    background-color: #FCC5C0; /* طیف 3 */
+    background-color: #F89880; /* طیف 3 */
 }
 
 body.day .slider-counter {
