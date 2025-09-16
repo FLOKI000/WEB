@@ -47,7 +47,7 @@ body.day .sidebar a, body.day .theme-toggle {
 
 body.day .sidebar a:hover, body.day .theme-toggle:hover,
 body.day .sidebar a:active, body.day .theme-toggle:active {
-    background-color: #F9A799; /* طیف 3 */
+    background-color: #FCC5C0; /* طیف 3 */
     transform: scale(1.05);
 }
 
@@ -83,7 +83,7 @@ body.day .slider-button {
 }
 
 body.day .slider-button:hover, body.day .slider-button:active {
-    background-color: #F9A799; /* طیف 3 */
+    background-color: #FCC5C0; /* طیف 3 */
 }
 
 body.day .slider-counter {
