@@ -1,48 +1,8 @@
-/* تعریف طیف‌های رنگی برای تم روز (بر اساس #F89880) */
-:root {
-    --day-color-1: #F89880;  /* رنگ اصلی */
-    --day-color-2: #F9A18B;
-    --day-color-3: #FAAB96;
-    --day-color-4: #FBB4A1;
-    --day-color-5: #FCBDAE;
-    --day-color-6: #FDC6B9;
-    --day-color-7: #FECFC4;
-    --day-color-8: #FFD8D0;
-    --day-color-9: #FFE2DC;
-    --day-color-10: #FFEBE8;
-    --day-color-11: #FFF4F3;
-    --day-color-12: #FFF8F7;
-    --day-color-13: #FFFBFA;
-    --day-color-14: #FFFDFC;
-    --day-color-15: #FFFFFF; /* کم‌رنگ‌ترین */
-    --day-text-color: #000000; /* رنگ متن و فلش‌ها */
-}
-
-/* تعریف طیف‌های رنگی برای تم شب (بر اساس #191919) */
-:root {
-    --night-color-1: #191919;  /* رنگ اصلی */
-    --night-color-2: #252525;
-    --night-color-3: #313131;
-    --night-color-4: #3D3D3D;
-    --night-color-5: #494949;
-    --night-color-6: #555555;
-    --night-color-7: #616161;
-    --night-color-8: #6D6D6D;
-    --night-color-9: #797979;
-    --night-color-10: #858585;
-    --night-color-11: #919191;
-    --night-color-12: #9D9D9D;
-    --night-color-13: #A9A9A9;
-    --night-color-14: #B5B5B5;
-    --night-color-15: #C1C1C1; /* کم‌رنگ‌ترین */
-    --night-text-color: #FFFFFF; /* رنگ متن و فلش‌ها */
-}
-
 body {
     margin: 0;
     font-family: 'Vazirmatn', Arial, sans-serif;
-    background-color: var(--day-color-15);
-    color: var(--day-text-color);
+    background-color: #ffffff;
+    color: #000000;
     color-profile: sRGB;
     overflow-x: hidden;
     direction: rtl;
@@ -59,156 +19,148 @@ body {
 
 /* تم روز */
 body.day {
-    background-color: var(--day-color-11); /* طیف 11 برای پس‌زمینه */
-    color: var(--day-text-color);
+    background-color: #FFF8E1; /* طیف 7 (کم رنگ‌ترین) */
+    color: #000000;
 }
 
 body.day .offline-message {
-    background-color: var(--day-color-1); /* طیف 1 */
-    color: var(--day-text-color);
+    background-color: #d32f2f;
+    color: #ffffff;
 }
 
 body.day .nav-container {
-    background-color: var(--day-color-6); /* طیف 6 */
+    background-color: #FFE082; /* طیف 6 */
 }
 
 body.day .nav svg {
-    stroke: var(--day-text-color); /* رنگ فلش‌ها */
+    stroke: #FFCA28; /* طیف 5 */
 }
 
 body.day .sidebar {
-    background-color: var(--day-color-6); /* طیف 6 */
+    background-color: #FFE082; /* طیف 6 */
 }
 
 body.day .sidebar a, body.day .theme-toggle {
-    background-color: var(--day-color-4); /* طیف 4 */
-    color: var(--day-text-color);
+    background-color: #FFB300; /* طیف 4 */
+    color: #000000;
 }
 
 body.day .sidebar a:hover, body.day .theme-toggle:hover,
 body.day .sidebar a:active, body.day .theme-toggle:active {
-    background-color: var(--day-color-3); /* طیف 3 */
+    background-color: #FFA000; /* طیف 3 */
     transform: scale(1.05);
 }
 
 body.day .section, body.day .os-box {
-    background-color: var(--day-color-5); /* طیف 5 */
+    background-color: #FFE082; /* طیف 6 */
 }
 
 body.day .os-box-header {
-    color: var(--day-text-color); /* رنگ متن */
+    color: #FFCA28; /* طیف 5 */
 }
 
 body.day .os-box-header:hover, body.day .os-box-header:active {
-    background-color: var(--day-color-2); /* طیف 2 */
+    background-color: #FF8F00; /* طیف 2 */
     transform: scale(1.02);
 }
 
 body.day .os-box-content {
-    background-color: var(--day-color-11); /* طیف 11 */
+    background-color: #FFF8E1; /* طیف 7 */
 }
 
 body.day .os-box-content div {
-    background-color: var(--day-color-5); /* طیف 5 */
-    color: var(--day-text-color);
+    background-color: #FFE082; /* طیف 6 */
+    color: #000000;
 }
 
 body.day .os-box-content div:hover, body.day .os-box-content div:active {
-    background-color: var(--day-color-2); /* طیف 2 */
+    background-color: #FF8F00; /* طیف 2 */
     transform: scale(1.02);
 }
 
 body.day .slider-button {
-    background-color: var(--day-color-4); /* طیف 4 */
+    background-color: #FFB300; /* طیف 4 */
 }
 
 body.day .slider-button:hover, body.day .slider-button:active {
-    background-color: var(--day-color-3); /* طیف 3 */
-}
-
-body.day .slider-button svg {
-    stroke: var(--day-text-color); /* رنگ فلش‌ها */
+    background-color: #FFA000; /* طیف 3 */
 }
 
 body.day .slider-counter {
-    color: var(--day-text-color); /* رنگ متن */
+    color: #FFCA28; /* طیف 5 */
 }
 
 /* تم شب */
 body.night {
-    background-color: var(--night-color-11); /* طیف 11 برای پس‌زمینه */
-    color: var(--night-text-color);
+    background-color: #333333;
+    color: #ffffff;
 }
 
 body.night .offline-message {
-    background-color: var(--night-color-1); /* طیف 1 */
-    color: var(--night-text-color);
+    background-color: #d32f2f;
+    color: #ffffff;
 }
 
 body.night .nav-container {
-    background-color: var(--night-color-6); /* طیف 6 */
+    background-color: #444444;
 }
 
 body.night .nav svg {
-    stroke: var(--night-text-color); /* رنگ فلش‌ها */
+    stroke: #ffffff;
 }
 
 body.night .sidebar {
-    background-color: var(--night-color-6); /* طیف 6 */
+    background-color: #444444;
 }
 
 body.night .sidebar a, body.night .theme-toggle {
-    background-color: var(--night-color-4); /* طیف 4 */
-    color: var(--night-text-color);
+    background-color: #555555;
+    color: #ffffff;
 }
 
 body.night .sidebar a:hover, body.night .theme-toggle:hover,
 body.night .sidebar a:active, body.night .theme-toggle:active {
-    background-color: var(--night-color-3); /* طیف 3 */
+    background-color: #666666;
     transform: scale(1.05);
 }
 
 body.night .section, body.night .os-box {
-    background-color: var(--night-color-5); /* طیف 5 */
+    background-color: #444444;
 }
 
 body.night .os-box-header {
-    color: var(--night-text-color); /* رنگ متن */
+    color: #ffffff;
 }
 
 body.night .os-box-header:hover, body.night .os-box-header:active {
-    background-color: var(--night-color-2); /* طیف 2 */
+    background-color: #777777;
     transform: scale(1.02);
 }
 
 body.night .os-box-content {
-    background-color: var(--night-color-11); /* طیف 11 */
+    background-color: #333333;
 }
 
 body.night .os-box-content div {
-    background-color: var(--night-color-5); /* طیف 5 */
-    color: var(--night-text-color);
+    background-color: #444444;
+    color: #ffffff;
 }
 
 body.night .os-box-content div:hover, body.night .os-box-content div:active {
-    background-color: var(--night-color-2); /* طیف 2 */
+    background-color: #777777;
     transform: scale(1.02);
 }
 
 body.night .slider-button {
-    background-color: var(--night-color-4); /* طیف 4 */
+    background-color: #555555;
 }
 
 body.night .slider-button:hover, body.night .slider-button:active {
-    background-color: var(--night-color-3); /* طیف 3 */
-}
-
-body.night .slider-button svg {
-    stroke: var(--night-text-color); /* رنگ فلش‌ها */
+    background-color: #666666;
 }
 
 body.night .slider-counter {
-    color: var(--night-text-color); /* رنگ متن */
+    color: #ffffff;
 }
 
 /* استایل آفلاین */
@@ -438,14 +390,14 @@ body.offline .offline-message {
 }
 
 .os-box-header::after {
-    content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="%23000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>');
+    content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="%23FFCA28" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>');
     position: absolute;
     left: 20px;
     transition: transform 0.2s ease;
 }
 
 body.night .os-box-header::after {
-    content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="%23FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>');
+    content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="%23999999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>');
 }
 
 .os-box-header.active::after {
@@ -540,6 +492,7 @@ body.night .os-box-header::after {
     width: 28px;
     height: 28px;
     fill: none;
+    stroke: #ffffff;
     stroke-width: 2;
     stroke-linecap: round;
     stroke-linejoin: round;
