@@ -17,9 +17,9 @@ body {
     }
 }
 
-/* تم روز */
+/* طیف رنگی تم روز (بر اساس #F89880) */
 body.day {
-    background-color: #FFFFFF; /* طیف 7 (کم‌رنگ‌ترین، سفید) */
+    background-color: #FEF2F0; /* طیف 15 (کم‌رنگ‌ترین) */
     color: #000000;
 }
 
@@ -29,70 +29,74 @@ body.day .offline-message {
 }
 
 body.day .nav-container {
-    background-color: #FCC5C0; /* طیف 5 */
+    background-color: #FDDAD5; /* طیف 12 */
 }
 
 body.day .nav svg {
-    stroke: #000000; /* مشکی برای فلش‌ها */
+    stroke: #000000;
 }
 
 body.day .sidebar {
-    background-color: #F89880; /* طیف 5 */
+    background-color: #FDDAD5; /* طیف 12 */
 }
 
 body.day .sidebar a, body.day .theme-toggle {
-    background-color: #FBB6AD; /* طیف 4 */
+    background-color: #FBC1B9; /* طیف 9 */
     color: #000000;
 }
 
 body.day .sidebar a:hover, body.day .theme-toggle:hover,
 body.day .sidebar a:active, body.day .theme-toggle:active {
-    background-color: #F89880; /* طیف 3 */
+    background-color: #FAA89E; /* طیف 7 */
     transform: scale(1.05);
 }
 
 body.day .section, body.day .os-box {
-    background-color: #F89880; /* طیف 5 */
+    background-color: #FDDAD5; /* طیف 12 */
 }
 
 body.day .os-box-header {
-    color: #000000; /* مشکی */
+    color: #000000;
 }
 
 body.day .os-box-header:hover, body.day .os-box-header:active {
-    background-color: #F89880; /* طیف 2 */
+    background-color: #F98F83; /* طیف 5 */
     transform: scale(1.02);
 }
 
 body.day .os-box-content {
-    background-color: #FFFFFF; /* طیف 7 (سفید) */
+    background-color: #FEF2F0; /* طیف 15 */
 }
 
 body.day .os-box-content div {
-    background-color: #F89880; /* طیف 5 */
+    background-color: #FDDAD5; /* طیف 12 */
     color: #000000;
 }
 
 body.day .os-box-content div:hover, body.day .os-box-content div:active {
-    background-color: #F89880; /* طیف 2 */
+    background-color: #F98F83; /* طیف 5 */
     transform: scale(1.02);
 }
 
 body.day .slider-button {
-    background-color: #FBB6AD; /* طیف 4 */
+    background-color: #FBC1B9; /* طیف 9 */
 }
 
 body.day .slider-button:hover, body.day .slider-button:active {
-    background-color: #F89880; /* طیف 3 */
+    background-color: #FAA89E; /* طیف 7 */
 }
 
 body.day .slider-counter {
-    color: #000000; /* مشکی */
+    color: #000000;
 }
 
-/* تم شب */
+body.day .os-box-header::after {
+    content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="%23000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>');
+}
+
+/* طیف رنگی تم شب (بر اساس #191919) */
 body.night {
-    background-color: #333333;
+    background-color: #333333; /* طیف 15 (کم‌رنگ‌ترین) */
     color: #ffffff;
 }
 
@@ -102,7 +106,7 @@ body.night .offline-message {
 }
 
 body.night .nav-container {
-    background-color: #444444;
+    background-color: #2A2A2A; /* طیف 12 */
 }
 
 body.night .nav svg {
@@ -110,22 +114,22 @@ body.night .nav svg {
 }
 
 body.night .sidebar {
-    background-color: #444444;
+    background-color: #2A2A2A; /* طیف 12 */
 }
 
 body.night .sidebar a, body.night .theme-toggle {
-    background-color: #555555;
+    background-color: #212121; /* طیف 9 */
     color: #ffffff;
 }
 
 body.night .sidebar a:hover, body.night .theme-toggle:hover,
 body.night .sidebar a:active, body.night .theme-toggle:active {
-    background-color: #666666;
+    background-color: #1C1C1C; /* طیف 7 */
     transform: scale(1.05);
 }
 
 body.night .section, body.night .os-box {
-    background-color: #444444;
+    background-color: #2A2A2A; /* طیف 12 */
 }
 
 body.night .os-box-header {
@@ -133,34 +137,42 @@ body.night .os-box-header {
 }
 
 body.night .os-box-header:hover, body.night .os-box-header:active {
-    background-color: #777777;
+    background-color: #161616; /* طیف 5 */
     transform: scale(1.02);
 }
 
 body.night .os-box-content {
-    background-color: #333333;
+    background-color: #333333; /* طیف 15 */
 }
 
 body.night .os-box-content div {
-    background-color: #444444;
+    background-color: #2A2A2A; /* طیف 12 */
     color: #ffffff;
 }
 
 body.night .os-box-content div:hover, body.night .os-box-content div:active {
-    background-color: #777777;
+    background-color: #161616; /* طیف 5 */
     transform: scale(1.02);
 }
 
 body.night .slider-button {
-    background-color: #555555;
+    background-color: #212121; /* طیف 9 */
 }
 
 body.night .slider-button:hover, body.night .slider-button:active {
-    background-color: #666666;
+    background-color: #1C1C1C; /* طیف 7 */
 }
 
 body.night .slider-counter {
     color: #ffffff;
+}
+
+body.night .os-box-header::after {
+    content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="%23FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>');
+}
+
+body.night .slider-button svg {
+    stroke: #ffffff;
 }
 
 /* استایل آفلاین */
@@ -396,10 +408,6 @@ body.offline .offline-message {
     transition: transform 0.2s ease;
 }
 
-body.night .os-box-header::after {
-    content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="%23999999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>');
-}
-
 .os-box-header.active::after {
     transform: rotate(180deg);
 }
@@ -492,14 +500,9 @@ body.night .os-box-header::after {
     width: 28px;
     height: 28px;
     fill: none;
-    stroke: #000000; /* مشکی برای فلش‌های اسلایدر در تم روز */
     stroke-width: 2;
     stroke-linecap: round;
     stroke-linejoin: round;
-}
-
-body.night .slider-button svg {
-    stroke: #ffffff; /* سفید برای تم شب */
 }
 
 .slider-button.prev {
