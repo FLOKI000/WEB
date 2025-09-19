@@ -1,7 +1,7 @@
 body {
     margin: 0;
     font-family: 'Vazirmatn', Arial, sans-serif;
-    background-color: #ffffff;
+    background-color: #FFECC0; /* طیف 7 (کم‌رنگ‌ترین) */
     color: #000000;
     color-profile: sRGB;
     overflow-x: hidden;
@@ -19,7 +19,7 @@ body {
 
 /* تم روز */
 body.day {
-    background-color: #FFFFFF; /* طیف 7 (کم‌رنگ‌ترین، سفید) */
+    background-color: #FFECC0; /* طیف 7 */
     color: #000000;
 }
 
@@ -29,61 +29,79 @@ body.day .offline-message {
 }
 
 body.day .nav-container {
-    background-color: #FCC5C0; /* طیف 5 */
+    background-color: #FFC29B; /* طیف 5 */
 }
 
 body.day .nav svg {
     stroke: #000000; /* مشکی برای فلش‌ها */
 }
 
-body.day .sidebar {
-    background-color: #FCC5C0; /* طیف 5 */
-}
-
-body.day .sidebar a, body.day .theme-toggle {
-    background-color: #FBB6AD; /* طیف 4 */
+body.day .support-button {
+    background-color: #FFC29B; /* طیف 5 */
     color: #000000;
 }
 
-body.day .sidebar a:hover, body.day .theme-toggle:hover,
-body.day .sidebar a:active, body.day .theme-toggle:active {
-    background-color: #F9A799; /* طیف 3 */
+body.day .support-button:hover,
+body.day .support-button:active {
+    background-color: #F39F9F; /* طیف 3 */
     transform: scale(1.05);
 }
 
-body.day .section, body.day .os-box {
-    background-color: #FCC5C0; /* طیف 5 */
+body.day .sidebar {
+    background-color: #FFC29B; /* طیف 5 */
+}
+
+body.day .sidebar a,
+body.day .theme-toggle {
+    background-color: #F39F9F; /* طیف 4 */
+    color: #000000;
+}
+
+body.day .sidebar a:hover,
+body.day .theme-toggle:hover,
+body.day .sidebar a:active,
+body.day .theme-toggle:active {
+    background-color: #B95E82; /* طیف 3 */
+    transform: scale(1.05);
+}
+
+body.day .section,
+body.day .os-box {
+    background-color: #FFC29B; /* طیف 5 */
 }
 
 body.day .os-box-header {
     color: #000000; /* مشکی */
 }
 
-body.day .os-box-header:hover, body.day .os-box-header:active {
-    background-color: #F89880; /* طیف 2 */
+body.day .os-box-header:hover,
+body.day .os-box-header:active {
+    background-color: #B95E82; /* طیف 2 */
     transform: scale(1.02);
 }
 
 body.day .os-box-content {
-    background-color: #FFFFFF; /* طیف 7 (سفید) */
+    background-color: #FFECC0; /* طیف 7 */
 }
 
 body.day .os-box-content div {
-    background-color: #FCC5C0; /* طیف 5 */
+    background-color: #FFC29B; /* طیف 5 */
     color: #000000;
 }
 
-body.day .os-box-content div:hover, body.day .os-box-content div:active {
-    background-color: #F89880; /* طیف 2 */
+body.day .os-box-content div:hover,
+body.day .os-box-content div:active {
+    background-color: #B95E82; /* طیف 2 */
     transform: scale(1.02);
 }
 
 body.day .slider-button {
-    background-color: #FBB6AD; /* طیف 4 */
+    background-color: #F39F9F; /* طیف 4 */
 }
 
-body.day .slider-button:hover, body.day .slider-button:active {
-    background-color: #F9A799; /* طیف 3 */
+body.day .slider-button:hover,
+body.day .slider-button:active {
+    background-color: #B95E82; /* طیف 3 */
 }
 
 body.day .slider-counter {
@@ -109,22 +127,37 @@ body.night .nav svg {
     stroke: #ffffff;
 }
 
-body.night .sidebar {
+body.night .support-button {
     background-color: #444444;
-}
-
-body.night .sidebar a, body.night .theme-toggle {
-    background-color: #555555;
     color: #ffffff;
 }
 
-body.night .sidebar a:hover, body.night .theme-toggle:hover,
-body.night .sidebar a:active, body.night .theme-toggle:active {
+body.night .support-button:hover,
+body.night .support-button:active {
     background-color: #666666;
     transform: scale(1.05);
 }
 
-body.night .section, body.night .os-box {
+body.night .sidebar {
+    background-color: #444444;
+}
+
+body.night .sidebar a,
+body.night .theme-toggle {
+    background-color: #555555;
+    color: #ffffff;
+}
+
+body.night .sidebar a:hover,
+body.night .theme-toggle:hover,
+body.night .sidebar a:active,
+body.night .theme-toggle:active {
+    background-color: #666666;
+    transform: scale(1.05);
+}
+
+body.night .section,
+body.night .os-box {
     background-color: #444444;
 }
 
@@ -132,7 +165,8 @@ body.night .os-box-header {
     color: #ffffff;
 }
 
-body.night .os-box-header:hover, body.night .os-box-header:active {
+body.night .os-box-header:hover,
+body.night .os-box-header:active {
     background-color: #777777;
     transform: scale(1.02);
 }
@@ -146,7 +180,8 @@ body.night .os-box-content div {
     color: #ffffff;
 }
 
-body.night .os-box-content div:hover, body.night .os-box-content div:active {
+body.night .os-box-content div:hover,
+body.night .os-box-content div:active {
     background-color: #777777;
     transform: scale(1.02);
 }
@@ -155,7 +190,8 @@ body.night .slider-button {
     background-color: #555555;
 }
 
-body.night .slider-button:hover, body.night .slider-button:active {
+body.night .slider-button:hover,
+body.night .slider-button:active {
     background-color: #666666;
 }
 
@@ -202,6 +238,46 @@ body.offline .offline-message {
 
 .theme-toggle:hover {
     transform: scale(1.05);
+}
+
+/* استایل دکمه پشتیبانی */
+.support-button {
+    position: fixed;
+    top: 10px;
+    left: 13px;
+    z-index: 1002;
+    backdrop-filter: blur(4px);
+    border-radius: 15px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: width 0.2s ease, height 0.2s ease;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    color-profile: sRGB;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+    text-decoration: none;
+}
+
+.support-button.active {
+    width: 140px;
+}
+
+.support-button span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.support-button svg {
+    width: 20px;
+    height: 20px;
+    margin-left: 5px;
 }
 
 /* استایل ظرف منوی همبرگری */
@@ -492,14 +568,14 @@ body.night .os-box-header::after {
     width: 28px;
     height: 28px;
     fill: none;
-    stroke: #000000; /* مشکی برای فلش‌های اسلایدر در تم روز */
+    stroke: #000000;
     stroke-width: 2;
     stroke-linecap: round;
     stroke-linejoin: round;
 }
 
 body.night .slider-button svg {
-    stroke: #ffffff; /* سفید برای تم شب */
+    stroke: #ffffff;
 }
 
 .slider-button.prev {
@@ -522,7 +598,8 @@ body.night .slider-button svg {
         right: 0;
     }
 
-    .sidebar a, .theme-toggle {
+    .sidebar a,
+    .theme-toggle {
         margin: 8px;
         padding: 8px;
         font-size: 14px;
@@ -530,7 +607,8 @@ body.night .slider-button svg {
         line-height: 1.5;
     }
 
-    .nav-container {
+    .nav-container,
+    .support-button {
         width: 40px;
         height: 40px;
     }
@@ -541,13 +619,20 @@ body.night .slider-button svg {
         border-radius: 12px;
     }
 
+    .support-button.active {
+        width: 110px;
+        height: 40px;
+        border-radius: 12px;
+    }
+
     .nav {
         width: 20px;
         height: 20px;
         margin: 0 5px;
     }
 
-    .section, .os-box {
+    .section,
+    .os-box {
         max-width: 90%;
         margin: 12px auto;
     }
@@ -588,7 +673,8 @@ body.night .slider-button svg {
         right: 0;
     }
 
-    .sidebar a, .theme-toggle {
+    .sidebar a,
+    .theme-toggle {
         margin: 10px;
         padding: 10px;
         font-size: 15px;
@@ -596,7 +682,8 @@ body.night .slider-button svg {
         line-height: 1.5;
     }
 
-    .section, .os-box {
+    .section,
+    .os-box {
         max-width: 80%;
         margin: 15px auto;
     }
@@ -623,7 +710,8 @@ body.night .slider-button svg {
 }
 
 @media (min-width: 1025px) {
-    .section, .os-box {
+    .section,
+    .os-box {
         max-width: 600px;
         margin: 20px auto;
     }
