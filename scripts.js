@@ -21,12 +21,19 @@ function toggleMenu() {
     menuToggle.checked = sidebar.classList.contains('active');
 }
 
+function toggleSupport() {
+    const supportButton = document.getElementById('support-button');
+    supportButton.classList.toggle('active');
+}
+
 function closeMenu() {
     const sidebar = document.getElementById('sidebar');
     const navContainer = document.getElementById('nav-container');
     const menuToggle = document.getElementById('menu-toggle');
+    const supportButton = document.getElementById('support-button');
     sidebar.classList.remove('active');
     navContainer.classList.remove('active');
+    supportButton.classList.remove('active');
     menuToggle.checked = false;
 }
 
@@ -144,16 +151,18 @@ window.addEventListener('offline', () => {
 document.addEventListener('click', function(event) {
     const sidebar = document.getElementById('sidebar');
     const navContainer = document.getElementById('nav-container');
+    const supportButton = document.getElementById('support-button');
     const isClickInsideSidebar = sidebar.contains(event.target);
     const isClickInsideNav = navContainer.contains(event.target);
+    const isClickInsideSupport = supportButton.contains(event.target);
 
-    if (!isClickInsideSidebar && !isClickInsideNav && sidebar.classList.contains('active')) {
+    if (!isClickInsideSidebar && !isClickInsideNav && !isClickInsideSupport && sidebar.classList.contains('active')) {
         closeMenu();
     }
 });
 
 document.addEventListener('touchstart', function(event) {
-    if (event.target.closest('.nav-container') || event.target.closest('.sidebar') || event.target.closest('.os-box-header') || event.target.closest('.os-box-content div') || event.target.closest('.slider-button')) {
+    if (event.target.closest('.nav-container') || event.target.closest('.sidebar') || event.target.closest('.support-button') || event.target.closest('.os-box-header') || event.target.closest('.os-box-content div') || event.target.closest('.slider-button')) {
         // اجازه عملکرد به المان‌های کلیک‌شدنی
     } else {
         if (document.getElementById('sidebar').classList.contains('active')) {
