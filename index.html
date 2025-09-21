@@ -583,14 +583,9 @@
 
             .support-button {
                 width: 40px;
-                font-size: 14px;
+                font-size: 20px;
                 padding: 8px;
-                line-height: 1.5;
-                text-align: center;
-            }
-
-            .support-button::before {
-                content: '👨🏻‍💻';
+                line-height: 1;
             }
 
             .sidebar {
@@ -666,7 +661,7 @@
             }
 
             .support-button {
-                width: 130px;
+                width: 140px;
                 font-size: 15px;
                 padding: 10px;
             }
@@ -763,7 +758,10 @@
                 </svg>
             </div>
         </div>
-        <a href="https://t.me/FLOKI333" target="_blank" class="support-button">ارتباط با پشتیبانی 👨🏻‍💻</a>
+        <a href="https://t.me/FLOKI333" target="_blank" class="support-button">
+            <span class="support-text-desktop">ارتباط با پشتیبانی 👨🏻‍💻</span>
+            <span class="support-text-mobile">👨🏻‍💻</span>
+        </a>
     </div>
 
     <div class="sidebar" id="sidebar">
@@ -908,6 +906,40 @@
             <path d="M48.33,45.6H18a14.17,14.17,0,0,1,0-28.34H78.86a17.37,17.37,0,0,1,0,34.74H42.33l-21-21.26L47.75,4"/>
         </symbol>
     </svg>
+
+    <style>
+        /* استایل‌های اضافی برای مدیریت متن دکمه پشتیبانی */
+        .support-text-desktop {
+            display: none;
+        }
+
+        .support-text-mobile {
+            display: none;
+        }
+
+        @media (max-width: 600px) {
+            .support-text-mobile {
+                display: inline;
+            }
+            .support-button {
+                width: 40px;
+                font-size: 20px;
+                padding: 8px;
+                line-height: 1;
+            }
+        }
+
+        @media (min-width: 601px) {
+            .support-text-desktop {
+                display: inline;
+            }
+            .support-button {
+                width: 140px;
+                font-size: 15px;
+                padding: 10px;
+            }
+        }
+    </style>
 
     <script>
         function toggleTheme() {
