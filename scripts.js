@@ -26,14 +26,21 @@ function toggleSupport() {
     supportButton.classList.toggle('active');
 }
 
+function toggleContactSupport() {
+    const contactSupportButton = document.getElementById('contact-support-button');
+    contactSupportButton.classList.toggle('active');
+}
+
 function closeMenu() {
     const sidebar = document.getElementById('sidebar');
     const navContainer = document.getElementById('nav-container');
     const menuToggle = document.getElementById('menu-toggle');
     const supportButton = document.getElementById('support-button');
+    const contactSupportButton = document.getElementById('contact-support-button');
     sidebar.classList.remove('active');
     navContainer.classList.remove('active');
     supportButton.classList.remove('active');
+    contactSupportButton.classList.remove('active');
     menuToggle.checked = false;
 }
 
@@ -152,17 +159,19 @@ document.addEventListener('click', function(event) {
     const sidebar = document.getElementById('sidebar');
     const navContainer = document.getElementById('nav-container');
     const supportButton = document.getElementById('support-button');
+    const contactSupportButton = document.getElementById('contact-support-button');
     const isClickInsideSidebar = sidebar.contains(event.target);
     const isClickInsideNav = navContainer.contains(event.target);
     const isClickInsideSupport = supportButton.contains(event.target);
+    const isClickInsideContactSupport = contactSupportButton.contains(event.target);
 
-    if (!isClickInsideSidebar && !isClickInsideNav && !isClickInsideSupport && sidebar.classList.contains('active')) {
+    if (!isClickInsideSidebar && !isClickInsideNav && !isClickInsideSupport && !isClickInsideContactSupport && sidebar.classList.contains('active')) {
         closeMenu();
     }
 });
 
 document.addEventListener('touchstart', function(event) {
-    if (event.target.closest('.nav-container') || event.target.closest('.sidebar') || event.target.closest('.support-button') || event.target.closest('.os-box-header') || event.target.closest('.os-box-content div') || event.target.closest('.slider-button')) {
+    if (event.target.closest('.nav-container') || event.target.closest('.sidebar') || event.target.closest('.support-button') || event.target.closest('.contact-support-button') || event.target.closest('.os-box-header') || event.target.closest('.os-box-content div') || event.target.closest('.slider-button')) {
         // اجازه عملکرد به المان‌های کلیک‌شدنی
     } else {
         if (document.getElementById('sidebar').classList.contains('active')) {
