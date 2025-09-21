@@ -34,13 +34,16 @@ body.day .nav svg {
     stroke: #000000;
 }
 
-body.day .support-button {
+body.day .support-button,
+body.day .contact-support-button {
     background-color: #FFC29B;
     color: #000000;
 }
 
 body.day .support-button:hover,
-body.day .support-button:active {
+body.day .support-button:active,
+body.day .contact-support-button:hover,
+body.day .contact-support-button:active {
     background-color: #F39F9F;
     transform: scale(1.05);
 }
@@ -124,13 +127,16 @@ body.night .nav svg {
     stroke: #ffffff;
 }
 
-body.night .support-button {
+body.night .support-button,
+body.night .contact-support-button {
     background-color: #444444;
     color: #ffffff;
 }
 
 body.night .support-button:hover,
-body.night .support-button:active {
+body.night .support-button:active,
+body.night .contact-support-button:hover,
+body.night .contact-support-button:active {
     background-color: #666666;
     transform: scale(1.05);
 }
@@ -235,10 +241,10 @@ body.offline .offline-message {
     transform: scale(1.05);
 }
 
-.support-button {
+.support-button,
+.contact-support-button {
     position: fixed;
     top: 10px;
-    left: 13px;
     z-index: 1002;
     backdrop-filter: blur(4px);
     border-radius: 15px;
@@ -256,11 +262,21 @@ body.offline .offline-message {
     text-decoration: none;
 }
 
-.support-button.active {
+.support-button {
+    left: 13px;
+}
+
+.contact-support-button {
+    left: 63px; /* Adjusted to be opposite the nav-container */
+}
+
+.support-button.active,
+.contact-support-button.active {
     width: 140px;
 }
 
-.support-button span {
+.support-button span,
+.contact-support-button span {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -594,7 +610,8 @@ body.night .slider-button svg {
     }
 
     .nav-container,
-    .support-button {
+    .support-button,
+    .contact-support-button {
         width: 40px;
         height: 40px;
     }
@@ -605,7 +622,8 @@ body.night .slider-button svg {
         border-radius: 12px;
     }
 
-    .support-button.active {
+    .support-button.active,
+    .contact-support-button.active {
         width: 110px;
         height: 40px;
         border-radius: 12px;
@@ -645,6 +663,10 @@ body.night .slider-button svg {
     .slider-counter {
         font-size: 14px;
         margin-top: 8px;
+    }
+
+    .contact-support-button {
+        left: 53px; /* Adjusted for smaller screens */
     }
 }
 
@@ -692,6 +714,10 @@ body.night .slider-button svg {
     .slider-counter {
         font-size: 15px;
         margin-top: 9px;
+    }
+
+    .contact-support-button {
+        left: 58px; /* Adjusted for medium screens */
     }
 }
 
