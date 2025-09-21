@@ -1,7 +1,7 @@
 body {
     margin: 0;
     font-family: 'Vazirmatn', Arial, sans-serif;
-    background-color: #FFECC0;
+    background-color: #ffffff;
     color: #000000;
     color-profile: sRGB;
     overflow-x: hidden;
@@ -10,14 +10,16 @@ body {
     touch-action: manipulation;
 }
 
+/* غیرفعال کردن تغییر تم توسط مرورگر */
 @media (prefers-color-scheme: dark) {
     :root {
         color-scheme: light only;
     }
 }
 
+/* تم روز */
 body.day {
-    background-color: #FFECC0;
+    background-color: #FFFFFF;
     color: #000000;
 }
 
@@ -26,89 +28,83 @@ body.day .offline-message {
     color: #ffffff;
 }
 
+body.day .nav-bar {
+    background-color: transparent;
+}
+
 body.day .nav-container {
-    background-color: #FFC29B;
+    background-color: #FCC5C0;
+}
+
+body.day .support-button {
+    background-color: #FCC5C0;
+    color: #000000;
+}
+
+body.day .support-button:hover, body.day .support-button:active {
+    background-color: #F9A799;
+    transform: scale(1.05);
 }
 
 body.day .nav svg {
     stroke: #000000;
 }
 
-body.day .support-button,
-body.day .contact-support-button {
-    background-color: #FFC29B;
-    color: #000000;
-}
-
-body.day .support-button:hover,
-body.day .support-button:active,
-body.day .contact-support-button:hover,
-body.day .contact-support-button:active {
-    background-color: #F39F9F;
-    transform: scale(1.05);
-}
-
 body.day .sidebar {
-    background-color: #FFC29B;
+    background-color: #FCC5C0;
 }
 
-body.day .sidebar a,
-body.day .theme-toggle {
-    background-color: #F39F9F;
+body.day .sidebar a, body.day .theme-toggle {
+    background-color: #FBB6AD;
     color: #000000;
 }
 
-body.day .sidebar a:hover,
-body.day .theme-toggle:hover,
-body.day .sidebar a:active,
-body.day .theme-toggle:active {
-    background-color: #B95E82;
+body.day .sidebar a:hover, body.day .theme-toggle:hover,
+body.day .sidebar a:active, body.day .theme-toggle:active {
+    background-color: #F9A799;
     transform: scale(1.05);
 }
 
-body.day .section,
-body.day .os-box {
-    background-color: #FFC29B;
+body.day .section, body.day .os-box {
+    background-color: #FCC5C0;
 }
 
 body.day .os-box-header {
     color: #000000;
 }
 
-body.day .os-box-header:hover,
-body.day .os-box-header:active {
-    background-color: #B95E82;
+body.day .os-box-header:hover, body.day .os-box-header:active {
+    background-color: #F89880;
     transform: scale(1.02);
 }
 
 body.day .os-box-content {
-    background-color: #FFECC0;
+    background-color: #FFFFFF;
 }
 
 body.day .os-box-content div {
-    background-color: #FFC29B;
+    background-color: #FCC5C0;
     color: #000000;
 }
 
-body.day .os-box-content div:hover,
-body.day .os-box-content div:active {
-    background-color: #B95E82;
+body.day .os-box-content div:hover, body.day .os-box-content div:active {
+    background-color: #F89880;
     transform: scale(1.02);
 }
 
 body.day .slider-button {
-    background-color: #F39F9F;
+    background-color: #FBB6AD;
 }
 
-body.day .slider-button:hover,
-body.day .slider-button:active {
-    background-color: #B95E82;
+body.day .slider-button:hover, body.day .slider-button:active {
+    background-color: #F9A799;
 }
 
 body.day .slider-counter {
     color: #000000;
 }
 
+/* تم شب */
 body.night {
     background-color: #333333;
     color: #ffffff;
@@ -119,48 +115,44 @@ body.night .offline-message {
     color: #ffffff;
 }
 
+body.night .nav-bar {
+    background-color: transparent;
+}
+
 body.night .nav-container {
     background-color: #444444;
+}
+
+body.night .support-button {
+    background-color: #444444;
+    color: #ffffff;
+}
+
+body.night .support-button:hover, body.night .support-button:active {
+    background-color: #666666;
+    transform: scale(1.05);
 }
 
 body.night .nav svg {
     stroke: #ffffff;
 }
 
-body.night .support-button,
-body.night .contact-support-button {
-    background-color: #444444;
-    color: #ffffff;
-}
-
-body.night .support-button:hover,
-body.night .support-button:active,
-body.night .contact-support-button:hover,
-body.night .contact-support-button:active {
-    background-color: #666666;
-    transform: scale(1.05);
-}
-
 body.night .sidebar {
     background-color: #444444;
 }
 
-body.night .sidebar a,
-body.night .theme-toggle {
+body.night .sidebar a, body.night .theme-toggle {
     background-color: #555555;
     color: #ffffff;
 }
 
-body.night .sidebar a:hover,
-body.night .theme-toggle:hover,
-body.night .sidebar a:active,
-body.night .theme-toggle:active {
+body.night .sidebar a:hover, body.night .theme-toggle:hover,
+body.night .sidebar a:active, body.night .theme-toggle:active {
     background-color: #666666;
     transform: scale(1.05);
 }
 
-body.night .section,
-body.night .os-box {
+body.night .section, body.night .os-box {
     background-color: #444444;
 }
 
@@ -168,8 +160,7 @@ body.night .os-box-header {
     color: #ffffff;
 }
 
-body.night .os-box-header:hover,
-body.night .os-box-header:active {
+body.night .os-box-header:hover, body.night .os-box-header:active {
     background-color: #777777;
     transform: scale(1.02);
 }
@@ -183,8 +174,7 @@ body.night .os-box-content div {
     color: #ffffff;
 }
 
-body.night .os-box-content div:hover,
-body.night .os-box-content div:active {
+body.night .os-box-content div:hover, body.night .os-box-content div:active {
     background-color: #777777;
     transform: scale(1.02);
 }
@@ -193,8 +183,7 @@ body.night .slider-button {
     background-color: #555555;
 }
 
-body.night .slider-button:hover,
-body.night .slider-button:active {
+body.night .slider-button:hover, body.night .slider-button:active {
     background-color: #666666;
 }
 
@@ -202,6 +191,7 @@ body.night .slider-counter {
     color: #ffffff;
 }
 
+/* استایل آفلاین */
 .offline-message {
     display: none;
     position: fixed;
@@ -217,6 +207,38 @@ body.offline .offline-message {
     display: block;
 }
 
+/* استایل نوار ناوبری */
+.nav-bar {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    left: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1002;
+}
+
+/* استایل دکمه پشتیبانی */
+.support-button {
+    padding: 12px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 16px;
+    text-align: center;
+    line-height: 1.5;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15);
+    width: 140px;
+    box-sizing: border-box;
+    display: block;
+    transform: scale(1);
+    will-change: transform, background-color;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* استایل دکمه تغییر تم */
 .theme-toggle {
     margin: 12px;
     padding: 12px;
@@ -241,61 +263,8 @@ body.offline .offline-message {
     transform: scale(1.05);
 }
 
-.support-button,
-.contact-support-button {
-    position: fixed;
-    top: 10px;
-    z-index: 1002;
-    backdrop-filter: blur(4px);
-    border-radius: 15px;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: width 0.2s ease, height 0.2s ease;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15);
-    cursor: pointer;
-    color-profile: sRGB;
-    touch-action: manipulation;
-    -webkit-tap-highlight-color: transparent;
-    text-decoration: none;
-}
-
-.support-button {
-    left: 13px;
-}
-
-.contact-support-button {
-    left: 63px; /* Adjusted to be opposite the nav-container */
-}
-
-.support-button.active,
-.contact-support-button.active {
-    width: 140px;
-}
-
-.support-button span,
-.contact-support-button span {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 14px;
-    white-space: nowrap;
-}
-
-.support-button svg {
-    width: 20px;
-    height: 20px;
-    margin-left: 5px;
-}
-
+/* استایل ظرف منوی همبرگری */
 .nav-container {
-    position: fixed;
-    top: 10px;
-    right: 13px;
-    z-index: 1002;
-    backdrop-filter: blur(4px);
     border-radius: 15px;
     width: 40px;
     height: 40px;
@@ -378,6 +347,7 @@ body.offline .offline-message {
     100% { stroke-dashoffset: 290; stroke-dasharray: 25 270; }
 }
 
+/* استایل منوی کناری */
 .sidebar {
     height: 100%;
     width: 140px;
@@ -419,14 +389,16 @@ body.offline .offline-message {
     -webkit-tap-highlight-color: transparent;
 }
 
+/* استایل محتوای اصلی */
 .content {
     position: relative;
-    top: 10px;
+    top: 60px;
     padding: 20px;
     text-align: center;
     z-index: 1;
 }
 
+/* استایل کادر مقدمه */
 .section {
     margin: 20px auto;
     padding: 20px;
@@ -440,6 +412,7 @@ body.offline .offline-message {
     touch-action: manipulation;
 }
 
+/* استایل کادرهای سیستم‌عامل */
 .os-box {
     margin: 20px auto;
     padding: 20px;
@@ -512,12 +485,14 @@ body.night .os-box-header::after {
     -webkit-tap-highlight-color: transparent;
 }
 
+/* استایل لینک‌های دانلود */
 .os-box-content a {
     display: block;
     text-decoration: none;
     color: inherit;
 }
 
+/* استایل اسلایدر تصاویر */
 .slider {
     position: relative;
     max-width: 100%;
@@ -589,7 +564,20 @@ body.night .slider-button svg {
     right: 10px;
 }
 
+/* استایل برای دستگاه‌های مختلف */
 @media (max-width: 600px) {
+    .nav-bar {
+        top: 8px;
+        right: 8px;
+        left: 8px;
+    }
+
+    .support-button {
+        width: 120px;
+        font-size: 14px;
+        padding: 8px;
+    }
+
     .sidebar {
         width: 110px;
         right: -110px;
@@ -600,8 +588,7 @@ body.night .slider-button svg {
         right: 0;
     }
 
-    .sidebar a,
-    .theme-toggle {
+    .sidebar a, .theme-toggle {
         margin: 8px;
         padding: 8px;
         font-size: 14px;
@@ -609,9 +596,7 @@ body.night .slider-button svg {
         line-height: 1.5;
     }
 
-    .nav-container,
-    .support-button,
-    .contact-support-button {
+    .nav-container {
         width: 40px;
         height: 40px;
     }
@@ -622,21 +607,13 @@ body.night .slider-button svg {
         border-radius: 12px;
     }
 
-    .support-button.active,
-    .contact-support-button.active {
-        width: 110px;
-        height: 40px;
-        border-radius: 12px;
-    }
-
     .nav {
         width: 20px;
         height: 20px;
         margin: 0 5px;
     }
 
-    .section,
-    .os-box {
+    .section, .os-box {
         max-width: 90%;
         margin: 12px auto;
     }
@@ -664,13 +641,21 @@ body.night .slider-button svg {
         font-size: 14px;
         margin-top: 8px;
     }
-
-    .contact-support-button {
-        left: 53px; /* Adjusted for smaller screens */
-    }
 }
 
 @media (min-width: 601px) and (max-width: 1024px) {
+    .nav-bar {
+        top: 9px;
+        right: 9px;
+        left: 9px;
+    }
+
+    .support-button {
+        width: 130px;
+        font-size: 15px;
+        padding: 10px;
+    }
+
     .sidebar {
         width: 120px;
         right: -120px;
@@ -681,8 +666,7 @@ body.night .slider-button svg {
         right: 0;
     }
 
-    .sidebar a,
-    .theme-toggle {
+    .sidebar a, .theme-toggle {
         margin: 10px;
         padding: 10px;
         font-size: 15px;
@@ -690,8 +674,7 @@ body.night .slider-button svg {
         line-height: 1.5;
     }
 
-    .section,
-    .os-box {
+    .section, .os-box {
         max-width: 80%;
         margin: 15px auto;
     }
@@ -715,15 +698,16 @@ body.night .slider-button svg {
         font-size: 15px;
         margin-top: 9px;
     }
-
-    .contact-support-button {
-        left: 58px; /* Adjusted for medium screens */
-    }
 }
 
 @media (min-width: 1025px) {
-    .section,
-    .os-box {
+    .nav-bar {
+        top: 10px;
+        right: 10px;
+        left: 10px;
+    }
+
+    .section, .os-box {
         max-width: 600px;
         margin: 20px auto;
     }
