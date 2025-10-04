@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سریال اول من - فیلم کیو</title>
+    <style>
+        body {
+            font-family: 'Tahoma', sans-serif;
+            background-color: #1a1a1a;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #000;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #ff6b35;
+        }
+        main {
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .poster {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .info {
+            background-color: #2a2a2a;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .info h1 {
+            color: #ff6b35;
+            margin-bottom: 10px;
+        }
+        .info p {
+            color: #ccc;
+            margin-bottom: 10px;
+        }
+        .buttons {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #ff6b35;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #e55a2b;
+        }
+        .save-btn.saved {
+            background-color: #4CAF50;
+        }
+        .download-section {
+            background-color: #2a2a2a;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .season {
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 1px solid #333;
+            border-radius: 5px;
+        }
+        .season h3 {
+            color: #ff6b35;
+            margin-bottom: 10px;
+        }
+        .download-options {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        .download-btn {
+            background-color: #333;
+            padding: 8px 15px;
+            font-size: 14px;
+        }
+        footer {
+            background-color: #000;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">فیلم کیو</div>
+    </header>
+
+    <main>
+        <img src="images/series1.jpg" alt="پوستر سریال" class="poster">
+        <div class="info">
+            <h1>سریال اول من</h1>
+            <p><strong>ژانر:</strong> درام، معمایی</p>
+            <p><strong>سال:</strong> 2024</p>
+            <p><strong>امتیاز:</strong> 9.0/10</p>
+            <p><strong>خلاصه:</strong> داستانی پیچیده با فصل‌های متعدد. فصل 1 کامل است.</p>
+        </div>
+
+        <div class="buttons">
+            <button id="save-btn" class="save-btn">سیو کن</button>
+        </div>
+
+        <div class="download-section">
+            <h2>دانلود فصل‌ها</h2>
+            <div class="season">
+                <h3>فصل 1</h3>
+                <div class="download-options">
+                    <a href="https://example.com/download/season1/sub" target="_blank"><button class="download-btn">زیرنویس</button></a>
+                    <a href="https://example.com/download/season1/dub" target="_blank"><button class="download-btn">دوبله</button></a>
+                </div>
+            </div>
+            <div class="season">
+                <h3>فصل 2</h3>
+                <div class="download-options">
+                    <a href="https://example.com/download/season2/sub" target="_blank"><button class="download-btn">زیرنویس</button></a>
+                    <a href="https://example.com/download/season2/dub" target="_blank"><button class="download-btn">دوبله</button></a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 فیلم کیو.</p>
+    </footer>
+
+    <script>
+        // سیو با localStorage
+        const saveBtn = document.getElementById('save-btn');
+        const seriesId = 'series1'; // منحصر به فرد برای هر سریال
+
+        if (localStorage.getItem(seriesId)) {
+            saveBtn.textContent = 'حذف از سیوها';
+            saveBtn.classList.add('saved');
+        }
+
+        saveBtn.addEventListener('click', () => {
+            if (localStorage.getItem(seriesId)) {
+                localStorage.removeItem(seriesId);
+                saveBtn.textContent = 'سیو کن';
+                saveBtn.classList.remove('saved');
+            } else {
+                localStorage.setItem(seriesId, 'saved');
+                saveBtn.textContent = 'حذف از سیوها';
+                saveBtn.classList.add('saved');
+            }
+        });
+    </script>
+</body>
+</html>
