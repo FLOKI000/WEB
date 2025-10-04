@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>فیلم اول من - فیلم کیو</title>
+    <style>
+        body {
+            font-family: 'Tahoma', sans-serif;
+            background-color: #1a1a1a;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #000;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #ff6b35;
+        }
+        main {
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .poster {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .info {
+            background-color: #2a2a2a;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .info h1 {
+            color: #ff6b35;
+            margin-bottom: 10px;
+        }
+        .info p {
+            color: #ccc;
+            margin-bottom: 10px;
+        }
+        .buttons {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #ff6b35;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #e55a2b;
+        }
+        .save-btn.saved {
+            background-color: #4CAF50;
+        }
+        .download-section {
+            background-color: #2a2a2a;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .download-options {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        .download-btn {
+            background-color: #333;
+            padding: 8px 15px;
+            font-size: 14px;
+        }
+        footer {
+            background-color: #000;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">فیلم کیو</div>
+    </header>
+
+    <main>
+        <img src="images/poster1.jpg" alt="پوستر فیلم" class="poster">
+        <div class="info">
+            <h1>فیلم اول من</h1>
+            <p><strong>ژانر:</strong> اکشن، هیجان‌انگیز</p>
+            <p><strong>سال:</strong> 2023</p>
+            <p><strong>امتیاز:</strong> 8.5/10</p>
+            <p><strong>خلاصه:</strong> این فیلم درباره یک ماجراجویی بزرگ است. بازیگران عالی و داستان جذاب.</p>
+        </div>
+
+        <div class="buttons">
+            <button id="save-btn" class="save-btn">سیو کن</button>
+        </div>
+
+        <div class="download-section">
+            <h2>دانلود</h2>
+            <div class="download-options">
+                <a href="https://example.com/download/subtitle" target="_blank"><button class="download-btn">زیرنویس</button></a>
+                <a href="https://example.com/download/dubbed" target="_blank"><button class="download-btn">دوبله</button></a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 فیلم کیو.</p>
+    </footer>
+
+    <script>
+        // سیو با localStorage
+        const saveBtn = document.getElementById('save-btn');
+        const movieId = 'film1'; // منحصر به فرد برای هر فیلم
+
+        if (localStorage.getItem(movieId)) {
+            saveBtn.textContent = 'حذف از سیوها';
+            saveBtn.classList.add('saved');
+        }
+
+        saveBtn.addEventListener('click', () => {
+            if (localStorage.getItem(movieId)) {
+                localStorage.removeItem(movieId);
+                saveBtn.textContent = 'سیو کن';
+                saveBtn.classList.remove('saved');
+            } else {
+                localStorage.setItem(movieId, 'saved');
+                saveBtn.textContent = 'حذف از سیوها';
+                saveBtn.classList.add('saved');
+            }
+        });
+    </script>
+</body>
+</html>
