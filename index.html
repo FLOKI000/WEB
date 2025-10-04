@@ -130,27 +130,31 @@
     </footer>
 
     <script>
-        // لود داده از JSON
-        fetch('data.json')
+        // لود فیلم‌ها از movies.json
+        fetch('movies.json')
             .then(response => response.json())
-            .then(data => {
-                // فیلم‌ها
+            .then(movies => {
                 const moviesGrid = document.getElementById('movies-grid');
-                data.movies.forEach(movie => {
+                movies.forEach(movie => {
                     const card = createCard(movie.title, movie.poster, movie.summary, movie.detailPage);
                     moviesGrid.appendChild(card);
                 });
+            })
+            .catch(error => console.error('خطا در لود فیلم‌ها:', error));
 
-                // سریال‌ها
+        // لود سریال‌ها از series.json
+        fetch('series.json')
+            .then(response => response.json())
+            .then(series => {
                 const seriesGrid = document.getElementById('series-grid');
-                data.series.forEach(series => {
-                    const card = createCard(series.title, series.poster, series.summary, series.detailPage);
+                series.forEach(serie => {
+                    const card = createCard(serie.title, serie.poster, serie.summary, serie.detailPage);
                     seriesGrid.appendChild(card);
                 });
             })
-            .catch(error => console.error('خطا در لود داده:', error));
+            .catch(error => console.error('خطا در لود سریال‌ها:', error));
 
-        // تابع ساخت کارت
+        // تابع ساخت کارت (مشترک برای هر دو)
         function createCard(title, poster, summary, detailPage) {
             const card = document.createElement('div');
             card.className = 'movie-card';
