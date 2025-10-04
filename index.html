@@ -3,17 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>فیلم کیو - دانلود فیلم و سریال</title>
+    <title>Soft Shiraz - دانلود فیلم و سریال</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         body {
             font-family: 'Tahoma', sans-serif;
-            background-color: #1a1a1a;
-            color: #fff;
+            background-color: #1e1e1e;
+            color: #ffffff;
             margin: 0;
             padding: 0;
         }
         header {
-            background-color: #000;
+            background: rgba(30, 30, 30, 0.9);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid #404040;
             padding: 10px 20px;
             display: flex;
             justify-content: space-between;
@@ -23,26 +26,45 @@
         .logo {
             font-size: 24px;
             font-weight: bold;
-            color: #ff6b35;
+            color: #ffd700;
+        }
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            color: #ffd700;
+        }
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background: #ffd700;
+            margin: 3px 0;
+            transition: 0.3s;
         }
         .search-bar {
             display: flex;
             gap: 10px;
+            align-items: center;
         }
         .search-bar input {
-            padding: 5px;
-            border: none;
+            padding: 8px;
+            border: 1px solid #404040;
             border-radius: 5px;
-            background-color: #333;
-            color: #fff;
+            background: rgba(45, 45, 45, 0.8);
+            color: #ffffff;
+            backdrop-filter: blur(5px);
         }
         .search-bar button {
-            padding: 5px 10px;
-            background-color: #ff6b35;
+            padding: 8px 12px;
+            background-color: #ffd700;
             border: none;
             border-radius: 5px;
-            color: #fff;
+            color: #000;
             cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .search-bar button:hover {
+            background-color: #ffeb3b;
         }
         main {
             padding: 20px;
@@ -51,8 +73,8 @@
             margin-bottom: 40px;
         }
         .section h2 {
-            color: #ff6b35;
-            border-bottom: 2px solid #ff6b35;
+            color: #ffd700;
+            border-bottom: 2px solid #ffd700;
             padding-bottom: 10px;
         }
         .movies-grid {
@@ -61,7 +83,9 @@
             gap: 20px;
         }
         .movie-card {
-            background-color: #2a2a2a;
+            background: rgba(45, 45, 45, 0.8);
+            backdrop-filter: blur(10px);
+            border: 1px solid #404040;
             border-radius: 10px;
             overflow: hidden;
             transition: transform 0.3s;
@@ -82,18 +106,59 @@
             font-size: 18px;
             font-weight: bold;
             margin-bottom: 5px;
+            color: #ffffff;
         }
         .movie-desc {
             font-size: 14px;
-            color: #ccc;
+            color: #ffffff;
+        }
+        .loading-spinner {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 200px;
+            font-size: 20px;
+            color: #ffd700;
+        }
+        .spinner {
+            border: 4px solid #404040;
+            border-top: 4px solid #ffd700;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
         }
         footer {
-            background-color: #000;
+            background: rgba(30, 30, 30, 0.9);
+            backdrop-filter: blur(10px);
+            border-top: 1px solid #404040;
             text-align: center;
             padding: 20px;
             margin-top: 40px;
+            color: #ffffff;
         }
         @media (max-width: 768px) {
+            .hamburger {
+                display: flex;
+            }
+            .search-bar {
+                display: none;
+                position: absolute;
+                top: 60px;
+                right: 20px;
+                background: rgba(45, 45, 45, 0.9);
+                padding: 10px;
+                border-radius: 5px;
+                flex-direction: column;
+                width: 200px;
+            }
+            .search-bar.active {
+                display: flex;
+            }
             .movies-grid {
                 grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
             }
@@ -102,16 +167,24 @@
 </head>
 <body>
     <header>
-        <div class="logo">فیلم کیو</div>
-        <div class="search-bar">
-            <input type="text" placeholder="جستجو...">
-            <button>جستجو</button>
+        <div class="logo">Soft Shiraz</div>
+        <div class="hamburger" onclick="toggleSearch()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="search-bar" id="search-bar">
+            <input type="text" id="search-input" placeholder="جستجو...">
+            <button onclick="searchMovies()"><i class="fas fa-search"></i></button>
         </div>
     </header>
 
     <main>
         <section id="movies" class="section">
             <h2>فیلم‌ها</h2>
+            <div class="loading-spinner" id="movies-loading">
+                <div class="spinner"></div>
+            </div>
             <div class="movies-grid" id="movies-grid">
                 <!-- کارت‌ها توسط JS ساخته می‌شن -->
             </div>
@@ -119,6 +192,9 @@
 
         <section id="series" class="section">
             <h2>سریال‌ها</h2>
+            <div class="loading-spinner" id="series-loading">
+                <div class="spinner"></div>
+            </div>
             <div class="movies-grid" id="series-grid">
                 <!-- کارت‌ها توسط JS ساخته می‌شن -->
             </div>
@@ -126,35 +202,52 @@
     </main>
 
     <footer>
-        <p>&copy; 2025 فیلم کیو. همه حقوق محفوظ است.</p>
+        <p>&copy; 2025 Soft Shiraz. همه حقوق محفوظ است.</p>
     </footer>
 
     <script>
-        // لود فیلم‌ها از movies.json
+        let allMovies = [];
+        let allSeries = [];
+
+        // لود فیلم‌ها با spinner
+        document.getElementById('movies-loading').style.display = 'flex';
         fetch('movies.json')
             .then(response => response.json())
             .then(movies => {
+                allMovies = movies;
                 const moviesGrid = document.getElementById('movies-grid');
                 movies.forEach(movie => {
                     const card = createCard(movie.title, movie.poster, movie.summary, movie.detailPage);
+                    card.classList.add('searchable');
                     moviesGrid.appendChild(card);
                 });
+                document.getElementById('movies-loading').style.display = 'none';
             })
-            .catch(error => console.error('خطا در لود فیلم‌ها:', error));
+            .catch(error => {
+                console.error('خطا در لود فیلم‌ها:', error);
+                document.getElementById('movies-loading').innerHTML = '<p>خطا در لود</p>';
+            });
 
-        // لود سریال‌ها از series.json
+        // لود سریال‌ها با spinner
+        document.getElementById('series-loading').style.display = 'flex';
         fetch('series.json')
             .then(response => response.json())
             .then(series => {
+                allSeries = series;
                 const seriesGrid = document.getElementById('series-grid');
                 series.forEach(serie => {
                     const card = createCard(serie.title, serie.poster, serie.summary, serie.detailPage);
+                    card.classList.add('searchable');
                     seriesGrid.appendChild(card);
                 });
+                document.getElementById('series-loading').style.display = 'none';
             })
-            .catch(error => console.error('خطا در لود سریال‌ها:', error));
+            .catch(error => {
+                console.error('خطا در لود سریال‌ها:', error);
+                document.getElementById('series-loading').innerHTML = '<p>خطا در لود</p>';
+            });
 
-        // تابع ساخت کارت (مشترک برای هر دو)
+        // تابع ساخت کارت
         function createCard(title, poster, summary, detailPage) {
             const card = document.createElement('div');
             card.className = 'movie-card';
@@ -166,16 +259,35 @@
                 </div>
             `;
             card.addEventListener('click', () => {
-                window.open(detailPage, '_blank'); // باز کردن در تب جدید
+                window.location.href = detailPage;
             });
             return card;
         }
 
-        // جستجو ساده (placeholder)
-        document.querySelector('.search-bar button').addEventListener('click', function() {
-            const query = document.querySelector('.search-bar input').value;
-            if (query) {
-                alert('جستجو برای: ' + query);
+        // جستجوی واقعی
+        function searchMovies() {
+            const query = document.getElementById('search-input').value.toLowerCase();
+            const cards = document.querySelectorAll('.searchable');
+            cards.forEach(card => {
+                const title = card.querySelector('.movie-title').textContent.toLowerCase();
+                if (title.includes(query)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // Hamburger toggle
+        function toggleSearch() {
+            const searchBar = document.getElementById('search-bar');
+            searchBar.classList.toggle('active');
+        }
+
+        // سرچ با Enter
+        document.getElementById('search-input').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                searchMovies();
             }
         });
     </script>
