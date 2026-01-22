@@ -17,20 +17,25 @@
       --text-light: #e0e0e0;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      height: auto;
+      min-height: 100vh;
+    }
     body {
       font-family: 'Vazirmatn', sans-serif;
       background: var(--dark-bg);
       display: flex;
+      flex-direction: column;
       align-items: center;
-      justify-content: center;
+      justify-content: flex-start;
+      padding: clamp(20px, 4vw, 40px) clamp(10px, 2vw, 20px);
       min-height: 100vh;
-      padding: clamp(8px, 1.5vw, 15px);
-      overflow: hidden;
     }
     #particles-js {
       position: fixed;
       inset: 0;
       z-index: 1;
+      pointer-events: none;
     }
     main {
       position: relative;
@@ -85,7 +90,7 @@
     }
     .role-tag {
       display: inline-block;
-      margin-top: clamp(16px, 3vw, 24px); /* فاصله با تیتر زیاد شد */
+      margin-top: clamp(16px, 3vw, 24px);
       padding: clamp(5px, 0.8vw, 8px) clamp(14px, 2vw, 24px);
       background: var(--gold-gradient);
       color: #000;
@@ -148,62 +153,60 @@
 
     /* گوشی */
     @media (max-width: 768px) {
+      body { padding: clamp(16px, 4vw, 30px) clamp(12px, 3vw, 20px); }
       main {
         grid-template-columns: 1fr;
-        max-width: 340px;
+        max-width: 380px;
         border-radius: 22px;
       }
       .profile-section {
         border-left: none;
         border-bottom: 1px solid var(--border-glass);
         flex-direction: row;
-        gap: 14px;
-        padding: 20px 18px;
+        gap: 16px;
+        padding: 24px 20px;
       }
       .image-container {
-        width: 100px;
-        max-width: 100px;
-        min-width: 100px;
+        width: 110px;
+        max-width: 110px;
+        min-width: 110px;
         border-radius: 50%;
       }
       .details-section {
         text-align: center;
-        padding: 22px 18px;
+        padding: 24px 20px;
       }
       .name-heading h1 {
-        font-size: clamp(28px, 8vw, 34px);
+        font-size: clamp(30px, 9vw, 38px);
       }
       .role-tag {
-        margin-top: 20px; /* در گوشی هم فاصله بیشتر */
-        padding: 6px 18px;
-        font-size: 12px;
+        margin-top: 20px;
+        padding: 7px 20px;
+        font-size: 13px;
       }
       .bio-text {
-        font-size: 13px;
-        margin-top: 14px;
+        font-size: 14px;
+        margin-top: 16px;
       }
       .social-links {
         grid-template-columns: 1fr;
-        gap: 11px;
-        margin-top: 22px;
+        gap: 12px;
+        margin-top: 28px;
       }
       .card-link {
-        padding: 13px;
-        gap: 11px;
+        padding: 14px;
+        gap: 12px;
         justify-content: center;
       }
       .icon-circle {
-        width: 40px;
-        height: 40px;
-      }
-      .card-link span {
-        font-size: 12.5px;
+        width: 42px;
+        height: 42px;
       }
       footer {
         flex-direction: column;
         text-align: center;
-        font-size: 9.5px;
-        margin-top: 22px;
+        font-size: 10px;
+        margin-top: 26px;
       }
     }
 
@@ -223,7 +226,6 @@
       main { 
         grid-template-columns: 1fr 1fr; 
         max-width: 90vw; 
-        max-height: 90vh;
       }
       .social-links { grid-template-columns: repeat(2, 1fr); }
     }
